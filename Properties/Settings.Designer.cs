@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace GADE_TASK_1v2.Properties
+namespace GADE_TASK_2.Properties
 {
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]

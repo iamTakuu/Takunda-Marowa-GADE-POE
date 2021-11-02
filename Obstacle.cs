@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 //Takunda Marowa 20123325
-namespace GADE_TASK_1v2
+namespace GADE_TASK_2
 {
     //A subcalss of tile. Used to make boarders
     class Obstacle : Tile

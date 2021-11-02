@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 //Takunda Marowa 20123325
-namespace GADE_TASK_1v2
+namespace GADE_TASK_2
 {
     public partial class GameScreen : Form
     {
