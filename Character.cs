@@ -102,7 +102,7 @@ namespace GADE_TASK_2
             switch (move)
             {
                 case MovementEnum.NoMovement:
-
+                    Console.WriteLine("No Move");
                     break;
                 case MovementEnum.Up:
                     Console.WriteLine("Up");
