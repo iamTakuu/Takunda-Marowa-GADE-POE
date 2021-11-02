@@ -23,5 +23,9 @@ namespace GADE_TASK_2
 
             throw new NotImplementedException();
         }
+        public override string ToString()
+        {
+            return "Mage " + base.ToString(); //Simply adds the word "Goblin" to the enemy output.
+        }
     }
 }

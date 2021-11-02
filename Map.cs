@@ -75,7 +75,7 @@ namespace GADE_TASK_2
 
             for (int i = 0; i < enemiesArray.Length; i++)
             {
-                tileArray2D[enemiesArray[i].X_, enemiesArray[i].Y_] = enemiesArray[i]; //Adding the created goblin to the Tile Array               
+                tileArray2D[enemiesArray[i].X_, enemiesArray[i].Y_] = enemiesArray[i]; //Adding the created enemies to the Tile Array               
 
             }
 
@@ -190,7 +190,11 @@ namespace GADE_TASK_2
                     }
                     else if (tileArray2D[x,y].GetType() == typeof(Goblin))
                     {
-                        MapArray[x,y] = dobby.Symbol_;
+                        MapArray[x, y] = tileArray2D[x, y].Symbol_;
+                    }
+                    else if (tileArray2D[x, y].GetType() == typeof(Mage))
+                    {
+                        MapArray[x, y] = tileArray2D[x, y].Symbol_;
                     }
                     else if (tileArray2D[x,y].GetType() == typeof(Obstacle))
                     {
@@ -292,6 +296,7 @@ namespace GADE_TASK_2
         {
             int x = 0;
             int y = 0;
+            int enemyID = 0;
             switch (type)
             {
                 case Tile.TileType.Hero:
@@ -310,7 +315,17 @@ namespace GADE_TASK_2
                         y = rand.Next(0, height);
                     } while (CheckCoord(x, y));
 
-                    return new Goblin(x, y);
+                    //Allows random generation of Goblin or Mage
+                    enemyID = rand.Next(1, 3);
+                    if (enemyID == 1)
+                    {
+                        return new Goblin(x, y);
+                    }
+                    else
+                    {
+                        return new Mage(x, y);
+                    }
+                    
 
                 default:
                     return new Hero(-1, -1, -1); //Invalid argunment (temporary)
