@@ -57,6 +57,7 @@
       <DependentUpon>GameScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Goblin.cs" />
+    <Compile Include="Gold.cs" />
     <Compile Include="Hero.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="Map.cs" />

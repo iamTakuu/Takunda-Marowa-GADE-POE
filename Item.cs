@@ -10,6 +10,10 @@ namespace GADE_TASK_2
     {
         protected Item(int x, int y, char symbol) : base(x, y, symbol)
         {
+
         }
+
+        public abstract override string ToString();
+    
     }
 }
