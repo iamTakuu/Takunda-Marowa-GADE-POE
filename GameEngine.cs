@@ -12,7 +12,7 @@ namespace GADE_TASK_2
     /// </summary>
     class GameEngine
     {
-        private Map gameMap = new Map(10, 15, 10, 15, 4);
+        private Map gameMap = new Map(10, 15, 10, 15, 4, 3);
         
         public Map GameMap
         {

@@ -15,7 +15,7 @@ namespace GADE_TASK_2
             get { return goldCount; }
             set { goldCount = value; }
         }
-        public Gold(int x, int y, char symbol) : base(x, y, symbol)
+        public Gold(int x, int y) : base(x, y, '$')
         {
             GoldCount_ = rand.Next(1, 6); //Generating a gold value between 1 and 5 (inclusive)
         }

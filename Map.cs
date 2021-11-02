@@ -13,6 +13,7 @@ namespace GADE_TASK_2
         private char[,] MapArray; //Will be used in ToString();
         public Hero hero;
         public Enemy[] enemiesArray;
+        public Item[] itemsArray;
         public EmptyTile emptyTile = new EmptyTile(0,0);
         public Obstacle wall = new Obstacle(0, 0);
         public Goblin dobby = new Goblin(0, 0);
@@ -21,7 +22,7 @@ namespace GADE_TASK_2
         private Random rand = new Random();
 
 
-        public Map(int minHeight, int maxHeight, int minWidth, int maxWidth, int enemyCount)
+        public Map(int minHeight, int maxHeight, int minWidth, int maxWidth, int enemyCount, int goldCount)
         {
             this.height = rand.Next(minHeight, maxHeight);
             this.width = rand.Next(minWidth, maxWidth);
@@ -33,7 +34,7 @@ namespace GADE_TASK_2
             MapArray = new char[width, height];
             
             enemiesArray = new Enemy[enemyCount];
-            //Enemy[] enemiesArray = new Enemy[enemyCount];
+            itemsArray = new Item[goldCount];
 
             hero = (Hero)Create(Tile.TileType.Hero); //Basically promising that I'll send back a Hero
 
@@ -44,8 +45,13 @@ namespace GADE_TASK_2
             for (int i = 0; i < enemiesArray.Length; i++)
             {
                 enemiesArray[i] = (Enemy)Create(Tile.TileType.Enemy); //Typecasting
-                tileArray2D[enemiesArray[i].X_, enemiesArray[i].Y_] = enemiesArray[i]; //Adding the created goblin to the Tile Array
+                tileArray2D[enemiesArray[i].X_, enemiesArray[i].Y_] = enemiesArray[i]; //Adding the created enemy to the Tile Array
+            }
 
+            for (int i = 0; i < itemsArray.Length; i++)
+            {
+                itemsArray[i] = (Item)Create(Tile.TileType.Gold);
+                tileArray2D[itemsArray[i].X_, itemsArray[i].Y_] = itemsArray[i];
             }
             
             
@@ -77,6 +83,11 @@ namespace GADE_TASK_2
             {
                 tileArray2D[enemiesArray[i].X_, enemiesArray[i].Y_] = enemiesArray[i]; //Adding the created enemies to the Tile Array               
 
+            }
+            for (int i = 0; i < itemsArray.Length; i++)
+            {
+                
+                tileArray2D[itemsArray[i].X_, itemsArray[i].Y_] = itemsArray[i]; //Adding the created Items to the Tile Array     
             }
 
 
@@ -188,11 +199,11 @@ namespace GADE_TASK_2
                     {
                         MapArray[x,y] = hero.Symbol_;
                     }
-                    else if (tileArray2D[x,y].GetType() == typeof(Goblin))
+                    else if (tileArray2D[x,y].GetType().BaseType == typeof(Enemy))
                     {
                         MapArray[x, y] = tileArray2D[x, y].Symbol_;
                     }
-                    else if (tileArray2D[x, y].GetType() == typeof(Mage))
+                    else if (tileArray2D[x, y].GetType() == typeof(Gold))
                     {
                         MapArray[x, y] = tileArray2D[x, y].Symbol_;
                     }
@@ -307,6 +318,15 @@ namespace GADE_TASK_2
                     } while (CheckCoord(x, y));
             
                     return new Hero(x, y, 10);
+
+                case Tile.TileType.Gold:
+                    do
+                    {
+                        x = rand.Next(0, width);
+                        y = rand.Next(0, height);
+                    } while (CheckCoord(x, y));
+
+                    return new Gold(x, y);
 
                 case Tile.TileType.Enemy:
                     do

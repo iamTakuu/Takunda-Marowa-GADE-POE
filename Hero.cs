@@ -25,26 +25,26 @@ namespace GADE_TASK_2
                 case MovementEnum.NoMovement:
                     return MovementEnum.NoMovement;
                 case MovementEnum.Up:
-                    if (characterVision[0].GetType() == typeof(EmptyTile))
+                    if (characterVision[0].GetType() == typeof(EmptyTile) || characterVision[0].GetType().BaseType == typeof(Item))
                     {
                         return MovementEnum.Up;
                     }
                     else return MovementEnum.NoMovement;
-                    
+
                 case MovementEnum.Right:
-                    if (characterVision[1].GetType() == typeof(EmptyTile))
+                    if (characterVision[1].GetType() == typeof(EmptyTile) || characterVision[1].GetType().BaseType == typeof(Item))
                     {
                         return MovementEnum.Right;
                     }
                     else return MovementEnum.NoMovement;
                 case MovementEnum.Down:
-                    if (characterVision[2].GetType() == typeof(EmptyTile))
+                    if (characterVision[2].GetType() == typeof(EmptyTile) || characterVision[2].GetType().BaseType == typeof(Item))
                     {
                         return MovementEnum.Down;
                     }
                     else return MovementEnum.NoMovement;
                 case MovementEnum.Left:
-                    if (characterVision[3].GetType() == typeof(EmptyTile))
+                    if (characterVision[3].GetType() == typeof(EmptyTile) || characterVision[3].GetType().BaseType == typeof(Item))
                     {
                         return MovementEnum.Left;
                     }
