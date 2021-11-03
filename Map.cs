@@ -368,5 +368,24 @@ namespace GADE_TASK_2
             else return false;
             
         }
+
+        public Item GetItemAtPosition(int x, int y)
+        {
+            Item tempItem;
+            for (int i = 0; i < itemsArray.Length; i++)
+            {
+                if (itemsArray[i].X_ == x && itemsArray[i].Y_ == y)
+                {
+                    tempItem = itemsArray[i];
+                    itemsArray[i] = null; //adds a null object into the array
+                    itemsArray = itemsArray.Where(z => z != null).ToArray();
+                    return tempItem;
+                }
+            }
+                
+               
+            return null;
+               
+        }
     }
 }

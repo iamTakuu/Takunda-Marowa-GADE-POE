@@ -15,6 +15,18 @@ namespace GADE_TASK_2
         protected int HP;
         protected int maxHP;
         protected int damage;
+        private int goldPurse_;
+        public int GoldPurse
+        {
+            get
+            {
+                return goldPurse_;
+            }
+            set
+            {
+                goldPurse_ = value;
+            }
+        }
         /// <summary>
         /// Reperesents the vision for the character:
         /// 0: UP/NORTH Tile;
@@ -48,6 +60,19 @@ namespace GADE_TASK_2
                 target.HP -= damage;
                 Console.WriteLine("Ouch!");
             }
+        }
+
+        public void Pickup(Item i)
+        {
+            if ( i.GetType() == typeof(Gold) )
+            {
+                AddGold((Gold)i); //Need to typecast it.
+            }
+        }
+
+        private void AddGold(Gold i)
+        {
+            GoldPurse += i.GoldCount_;
         }
 
         /// <summary>
