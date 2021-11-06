@@ -18,10 +18,64 @@ namespace GADE_TASK_2
             return MovementEnum.NoMovement;
         }
 
-        public override bool CheckRange(Character thisMage)
+        public override bool CheckRange(Character target)
         {
+            //use for loop outside to grab each item in the game and check for damage stuffs
+            if (this.Y_ - 1 == target.Y_) //Up
+            {
+                return true;
+            }
+            else if (this.Y + 1 == target.Y_) //Down
+            {
+                return true;
+            }
+            else if (this.X_ - 1 == target.X_) //Left
+            {
+                return true;
+            }
+            else if ( this.X_ + 1 == target.X_ ) //Right
+            {
+                return true;
+            }
+            else if ((this.Y_ - 1 == target.Y_) && (this.X_ - 1 == target.X_)) //Up & Left
+            {
+                return true;
+            }
+            else if ((this.Y_ - 1 == target.Y_) && (this.X_ + 1 == target.X_)) //Up Right
+            {
+                return true;
+            }
+            else if ((this.Y + 1 == target.Y_) && (this.X_ - 1 == target.X_)) //Down Left
+            {
+                return true;
+            }
+            else if ((this.Y + 1 == target.Y_) && (this.X_ + 1 == target.X_)) //Down Right
+            {
+                return true;
+            }
 
-            throw new NotImplementedException();
+            return false;
+            //throw new NotImplementedException();
+            //if ( Math.Abs(this.Y_ - target.Y_) == 1) //Checks above
+            //{
+            //    return true;
+            //}
+            //else if (Math.Abs(target.Y_ - this.Y_) == 1) //Checks below
+            //{
+            //    return true;
+            //}
+            //else if (Math.Abs(this.X_ - target.X_) == 1) //Checks left
+            //{
+            //    return true;
+            //}
+            //else if (Math.Abs(target.X_ - this.X_) ==1) //Checks right
+            //{
+            //    return true;
+            //}
+            //else if ( (Math.Abs(target.Y_ - Y) + Math.Abs(target.X_ - X)) == 2) //Allows for all diagonal
+            //{
+
+            //}
         }
         public override string ToString()
         {
