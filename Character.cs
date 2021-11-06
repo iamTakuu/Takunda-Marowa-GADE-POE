@@ -160,7 +160,7 @@ namespace GADE_TASK_2
         }
 
         /// <summary>
-        /// Still a bit lost on what exactly thus does.
+        /// Returns appropriate direction to move in.
         /// </summary>
         /// <param name="move"></param>
         /// <returns></returns>

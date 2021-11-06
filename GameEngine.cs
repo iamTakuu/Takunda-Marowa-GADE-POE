@@ -40,6 +40,7 @@ namespace GADE_TASK_2
                         }
                         GameMap.ClearHero();
                         GameMap.hero.Move(Character.MovementEnum.Up);
+                        //MoveEnemies();
                         return true;                   
 
                     }
@@ -54,6 +55,7 @@ namespace GADE_TASK_2
                         }
                         GameMap.ClearHero();
                         GameMap.hero.Move(Character.MovementEnum.Right);
+                        //MoveEnemies();
                         return true;                       
                         
                     }
@@ -69,6 +71,7 @@ namespace GADE_TASK_2
                         }
                         GameMap.ClearHero();
                         GameMap.hero.Move(Character.MovementEnum.Down);
+                        //MoveEnemies();
                         return true;                       
                         
                     }
@@ -83,6 +86,7 @@ namespace GADE_TASK_2
                         }
                         GameMap.ClearHero();
                         GameMap.hero.Move(Character.MovementEnum.Left);
+                        //MoveEnemies();
                         return true;                       
                         
                     }
@@ -95,7 +99,18 @@ namespace GADE_TASK_2
             
         }
 
-        
+        public void MoveEnemies()
+        {
+            for (int i = 0; i < GameMap.enemiesArray.Length; i++)
+            {
+                if (GameMap.enemiesArray[i].GetType() == typeof(Goblin))
+                {
+                    GameMap.enemiesArray[i].Move(GameMap.enemiesArray[i].ReturnMove());
+                }
+            }
+            GameMap.UpdateMap();
+            UpdateEngine();
+        }
         /// <summary>
         /// Updates game state.
         /// </summary>

@@ -78,7 +78,9 @@ namespace GADE_TASK_2
             //gameEngine.Update();
             if (gameEngine.MovePlayer(Character.MovementEnum.Up))
             {
+                
                 gameEngine.UpdateEngine();
+                gameEngine.MoveEnemies();
                 mapLabel.Text = gameEngine.ToString();
                 statsLabel.Text = gameEngine.GameMap.hero.ToString();
             }
@@ -94,6 +96,7 @@ namespace GADE_TASK_2
             if (gameEngine.MovePlayer(Character.MovementEnum.Right))
             {
                 gameEngine.UpdateEngine();
+                gameEngine.MoveEnemies();
                 mapLabel.Text = gameEngine.ToString();
                 statsLabel.Text = gameEngine.GameMap.hero.ToString();
             }
@@ -110,6 +113,7 @@ namespace GADE_TASK_2
             if (gameEngine.MovePlayer(Character.MovementEnum.Down))
             {
                 gameEngine.UpdateEngine();
+                gameEngine.MoveEnemies();
                 mapLabel.Text = gameEngine.ToString();
                 statsLabel.Text = gameEngine.GameMap.hero.ToString();
             }
@@ -124,6 +128,7 @@ namespace GADE_TASK_2
             if (gameEngine.MovePlayer(Character.MovementEnum.Left))
             {
                 gameEngine.UpdateEngine();
+                gameEngine.MoveEnemies();
                 mapLabel.Text = gameEngine.ToString();
                 statsLabel.Text = gameEngine.GameMap.hero.ToString();
             }
