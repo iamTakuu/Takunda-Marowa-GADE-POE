@@ -101,6 +101,7 @@ namespace GADE_TASK_2
 
         public void MoveEnemies()
         {
+            GameMap.UpdateVision();
             for (int i = 0; i < GameMap.enemiesArray.Length; i++)
             {
                 if (GameMap.enemiesArray[i].GetType() == typeof(Goblin))
@@ -108,6 +109,7 @@ namespace GADE_TASK_2
                     GameMap.enemiesArray[i].Move(GameMap.enemiesArray[i].ReturnMove());
                 }
             }
+            
             GameMap.UpdateMap();
             UpdateEngine();
         }
