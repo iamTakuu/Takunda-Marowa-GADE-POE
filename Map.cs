@@ -369,12 +369,18 @@ namespace GADE_TASK_2
             
         }
 
+        /// <summary>
+        /// Returns an Item from the X and Y coordinates given.
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
         public Item GetItemAtPosition(int x, int y)
         {
             Item tempItem;
             for (int i = 0; i < itemsArray.Length; i++)
             {
-                if (itemsArray[i].X_ == x && itemsArray[i].Y_ == y)
+                if ( (itemsArray[i].X_ == x) && (itemsArray[i].Y_ == y) )
                 {
                     tempItem = itemsArray[i];
                     itemsArray[i] = null; //adds a null object into the array

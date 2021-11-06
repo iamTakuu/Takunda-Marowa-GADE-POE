@@ -62,6 +62,10 @@ namespace GADE_TASK_2
             }
         }
 
+        /// <summary>
+        /// This will allow a character to picup any item it walks through.
+        /// </summary>
+        /// <param name="i"></param>
         public void Pickup(Item i)
         {
             if ( i.GetType() == typeof(Gold) )
@@ -70,9 +74,14 @@ namespace GADE_TASK_2
             }
         }
 
+        /// <summary>
+        /// This adds the Gold picked up.
+        /// </summary>
+        /// <param name="i"></param>
         private void AddGold(Gold i)
         {
             GoldPurse += i.GoldCount_;
+            Console.WriteLine("Got the gold baby!");
         }
 
         /// <summary>

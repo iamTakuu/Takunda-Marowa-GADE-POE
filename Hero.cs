@@ -59,7 +59,7 @@ namespace GADE_TASK_2
         public override string ToString()
         {
             string outputString;
-            outputString = "Player stats:" + "\nHP: " + this.HP + "/" + this.maxHP + "\nDamage: " +this.damage+ "\n [" +X+ "," +Y+ "]";
+            outputString = "Player stats:" + "\nHP: " + this.HP + "/" + this.maxHP + "\nDamage: " +this.damage+ "\n [" +X+ "," +Y+ "]" +"\nGold Count: "+this.GoldPurse;
             return outputString;
         }
     }

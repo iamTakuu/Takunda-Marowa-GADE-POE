@@ -34,6 +34,10 @@ namespace GADE_TASK_2
                 case Character.MovementEnum.Up:
                     if (GameMap.hero.ReturnMove(direction) == Character.MovementEnum.Up)
                     {
+                        if (GameMap.hero.characterVision[0].GetType().BaseType == typeof(Item))
+                        {
+                            GameMap.hero.Pickup(GameMap.GetItemAtPosition(GameMap.hero.characterVision[0].X_, GameMap.hero.characterVision[0].Y_));
+                        }
                         GameMap.ClearHero();
                         GameMap.hero.Move(Character.MovementEnum.Up);
                         return true;                   
@@ -44,6 +48,10 @@ namespace GADE_TASK_2
                 case Character.MovementEnum.Right:
                     if (GameMap.hero.ReturnMove(direction) == Character.MovementEnum.Right)
                     {
+                        if (GameMap.hero.characterVision[1].GetType().BaseType == typeof(Item))
+                        {
+                            GameMap.hero.Pickup(GameMap.GetItemAtPosition(GameMap.hero.characterVision[1].X_, GameMap.hero.characterVision[1].Y_));
+                        }
                         GameMap.ClearHero();
                         GameMap.hero.Move(Character.MovementEnum.Right);
                         return true;                       
@@ -55,6 +63,10 @@ namespace GADE_TASK_2
                 case Character.MovementEnum.Down:
                     if (GameMap.hero.ReturnMove(direction) == Character.MovementEnum.Down)
                     {
+                        if (GameMap.hero.characterVision[2].GetType().BaseType == typeof(Item))
+                        {
+                            GameMap.hero.Pickup(GameMap.GetItemAtPosition(GameMap.hero.characterVision[2].X_, GameMap.hero.characterVision[2].Y_));
+                        }
                         GameMap.ClearHero();
                         GameMap.hero.Move(Character.MovementEnum.Down);
                         return true;                       
@@ -65,7 +77,10 @@ namespace GADE_TASK_2
                 case Character.MovementEnum.Left:
                     if (GameMap.hero.ReturnMove(direction) == Character.MovementEnum.Left)
                     {
-
+                        if (GameMap.hero.characterVision[3].GetType().BaseType == typeof(Item))
+                        {
+                            GameMap.hero.Pickup(GameMap.GetItemAtPosition(GameMap.hero.characterVision[3].X_, GameMap.hero.characterVision[3].Y_));
+                        }
                         GameMap.ClearHero();
                         GameMap.hero.Move(Character.MovementEnum.Left);
                         return true;                       
