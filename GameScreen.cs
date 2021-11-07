@@ -80,8 +80,8 @@ namespace GADE_TASK_2
             if (gameEngine.MovePlayer(Character.MovementEnum.Up))
             {
                 gameEngine.UpdateEngine();
-                gameEngine.EnemiesAttack();
                 gameEngine.MoveEnemies();
+                gameEngine.EnemiesAttack();
                 UpdateForm();
             }
             
@@ -96,8 +96,8 @@ namespace GADE_TASK_2
             if (gameEngine.MovePlayer(Character.MovementEnum.Right))
             {
                 gameEngine.UpdateEngine();
-                gameEngine.EnemiesAttack();
                 gameEngine.MoveEnemies();
+                gameEngine.EnemiesAttack();
                 UpdateForm();
             }
 
@@ -109,8 +109,8 @@ namespace GADE_TASK_2
             if (gameEngine.MovePlayer(Character.MovementEnum.Down))
             {
                 gameEngine.UpdateEngine();
-                gameEngine.EnemiesAttack();
                 gameEngine.MoveEnemies();
+                gameEngine.EnemiesAttack();
                 UpdateForm();
             }
             
@@ -124,8 +124,8 @@ namespace GADE_TASK_2
             if (gameEngine.MovePlayer(Character.MovementEnum.Left))
             {
                 gameEngine.UpdateEngine();
-                gameEngine.EnemiesAttack();
                 gameEngine.MoveEnemies();
+                gameEngine.EnemiesAttack();
                 UpdateForm();
             }
             

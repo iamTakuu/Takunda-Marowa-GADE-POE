@@ -109,7 +109,7 @@ namespace GADE_TASK_2
             }
                 enemiesArray = enemiesArray.Where(z => z != null).ToArray(); //Coppies the array, without the Null Object. Found at: https://stackoverflow.com/questions/28193564/c-sharp-remove-null-values-from-object-array
             
-
+            
             UpdateVision();
            
 
