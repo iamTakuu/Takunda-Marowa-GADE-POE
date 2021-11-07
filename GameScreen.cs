@@ -61,6 +61,7 @@ namespace GADE_TASK_2
         private void AttackButton_Click(object sender, EventArgs e)
         {
             gameEngine.GameMap.hero.Attack(gameEngine.GameMap.enemiesArray[enemiesDropList.SelectedIndex]);
+            gameEngine.EnemiesAttack();
             logBox.Text += "\n"+ gameEngine.GameMap.enemiesArray[enemiesDropList.SelectedIndex].ToString();
             gameEngine.UpdateEngine();
             UpdateForm();
@@ -78,11 +79,10 @@ namespace GADE_TASK_2
             //gameEngine.Update();
             if (gameEngine.MovePlayer(Character.MovementEnum.Up))
             {
-                
                 gameEngine.UpdateEngine();
+                gameEngine.EnemiesAttack();
                 gameEngine.MoveEnemies();
                 UpdateForm();
-                
             }
             
             
@@ -96,13 +96,10 @@ namespace GADE_TASK_2
             if (gameEngine.MovePlayer(Character.MovementEnum.Right))
             {
                 gameEngine.UpdateEngine();
+                gameEngine.EnemiesAttack();
                 gameEngine.MoveEnemies();
                 UpdateForm();
             }
-            
-            
-
-            
 
         }
 
@@ -112,6 +109,7 @@ namespace GADE_TASK_2
             if (gameEngine.MovePlayer(Character.MovementEnum.Down))
             {
                 gameEngine.UpdateEngine();
+                gameEngine.EnemiesAttack();
                 gameEngine.MoveEnemies();
                 UpdateForm();
             }
@@ -126,6 +124,7 @@ namespace GADE_TASK_2
             if (gameEngine.MovePlayer(Character.MovementEnum.Left))
             {
                 gameEngine.UpdateEngine();
+                gameEngine.EnemiesAttack();
                 gameEngine.MoveEnemies();
                 UpdateForm();
             }

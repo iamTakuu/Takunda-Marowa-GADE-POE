@@ -113,6 +113,27 @@ namespace GADE_TASK_2
             GameMap.UpdateMap();
             UpdateEngine();
         }
+
+        public void EnemiesAttack()
+        {
+            GameMap.UpdateVision();
+            for (int i = 0; i < GameMap.enemiesArray.Length; i++)
+            {
+                if (GameMap.enemiesArray[i].GetType() == typeof(Goblin))
+                {
+                    GameMap.enemiesArray[i].Attack(GameMap.hero);
+                }
+                else if (GameMap.enemiesArray[i].GetType() == typeof(Mage))
+                {
+                    GameMap.enemiesArray[i].Attack(GameMap.hero);
+                    for (int j = 0; j < GameMap.enemiesArray.Length; j++)
+                    {
+                    GameMap.enemiesArray[i].Attack(GameMap.enemiesArray[j]);
+                    }
+                }
+                
+            }
+        }
         /// <summary>
         /// Updates game state.
         /// </summary>
