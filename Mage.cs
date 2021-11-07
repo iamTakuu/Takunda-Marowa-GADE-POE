@@ -21,19 +21,19 @@ namespace GADE_TASK_2
         public override bool CheckRange(Character target)
         {
             //use for loop outside to grab each item in the game and check for damage stuffs
-            if (this.Y_ - 1 == target.Y_) //Up
+            if ( (this.Y_ - 1 == target.Y_) && (this.X_ == target.X_) ) //Up
             {
                 return true;
             }
-            else if (this.Y + 1 == target.Y_) //Down
+            else if ( (this.Y + 1 == target.Y_) && (this.X_ == target.X_)) //Down
             {
                 return true;
             }
-            else if (this.X_ - 1 == target.X_) //Left
+            else if ((this.X_ - 1 == target.X_) && (this.Y_ == target.Y_)) //Left
             {
                 return true;
             }
-            else if ( this.X_ + 1 == target.X_ ) //Right
+            else if ( (this.X_ + 1 == target.X_) && (this.Y_ == target.Y_)) //Right
             {
                 return true;
             }

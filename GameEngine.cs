@@ -124,19 +124,35 @@ namespace GADE_TASK_2
                 {
                     GameMap.enemiesArray[i].Attack(GameMap.hero);
                 }
-                //else if (GameMap.enemiesArray[i].GetType() == typeof(Mage))
-                //{
-                //    GameMap.enemiesArray[i].Attack(GameMap.hero);
-                //    for (int j = 0; j < GameMap.enemiesArray.Length; j++)
-                //    {
-                //    GameMap.enemiesArray[i].Attack(GameMap.enemiesArray[j]);
-                //    }
-                //}
-                
-            }
 
+
+                else if (GameMap.enemiesArray[i].GetType() == typeof(Mage))
+                {
+                    GameMap.enemiesArray[i].Attack(GameMap.hero);
+                    for (int j = 0; j < GameMap.enemiesArray.Length; j++)
+                    {
+                        GameMap.enemiesArray[i].Attack(GameMap.enemiesArray[j]);
+                    }
+                }
+
+            }
+            GameMap.UpdateVision();
             GameMap.UpdateMap();
             UpdateEngine();
+        }
+        private void MageNuke()
+        {
+            for (int i = 0; i < GameMap.enemiesArray.Length; i++)
+            {
+                if (GameMap.enemiesArray[i].GetType() == typeof(Mage))
+                {
+                    for (int j = 0; j < GameMap.enemiesArray.Length; j++)
+                    {
+                        GameMap.enemiesArray[i].Attack(GameMap.enemiesArray[j]);
+                    }
+                    GameMap.enemiesArray[i].Attack(GameMap.hero);
+                }
+            }
         }
         /// <summary>
         /// Updates game state.
