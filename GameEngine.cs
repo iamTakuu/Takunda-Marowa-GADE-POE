@@ -146,6 +146,9 @@ namespace GADE_TASK_2
             GameMap.UpdateMap();
             UpdateEngine();
         }
+        /// <summary>
+        /// Allows the game to be saved. Save location is: \bin\debug (within project file.)
+        /// </summary>
         public void Save()
         {
             
