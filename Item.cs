@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GADE_TASK_2
 {
+    [Serializable]
     abstract class Item : Tile
     {
         protected Item(int x, int y, char symbol) : base(x, y, symbol)

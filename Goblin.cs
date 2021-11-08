@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 //Takunda Marowa 20123325
 namespace GADE_TASK_2
 {
+    [Serializable]
     /// <summary>
     /// A goblin. The Only enemy currently here.
     /// </summary>
+    
     class Goblin : Enemy
     {
         public Goblin(int x, int y) : base(x, y, 'G', 10, 1)

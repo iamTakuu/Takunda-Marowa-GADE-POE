@@ -39,6 +39,8 @@ namespace GADE_TASK_2
             this.enemiesDropList = new System.Windows.Forms.ComboBox();
             this.AttackButton = new System.Windows.Forms.Button();
             this.logBox = new System.Windows.Forms.RichTextBox();
+            this.SaveButton = new System.Windows.Forms.Button();
+            this.LoadButton = new System.Windows.Forms.Button();
             this.playerInfoGroup.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -150,11 +152,34 @@ namespace GADE_TASK_2
             this.logBox.TabIndex = 8;
             this.logBox.Text = "Log:";
             // 
+            // SaveButton
+            // 
+            this.SaveButton.Font = new System.Drawing.Font("Consolas", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton.Location = new System.Drawing.Point(297, 315);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(121, 40);
+            this.SaveButton.TabIndex = 9;
+            this.SaveButton.Text = "Save";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // LoadButton
+            // 
+            this.LoadButton.Font = new System.Drawing.Font("Consolas", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadButton.Location = new System.Drawing.Point(297, 371);
+            this.LoadButton.Name = "LoadButton";
+            this.LoadButton.Size = new System.Drawing.Size(121, 40);
+            this.LoadButton.TabIndex = 10;
+            this.LoadButton.Text = "Load";
+            this.LoadButton.UseVisualStyleBackColor = true;
+            // 
             // GameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LoadButton);
+            this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.logBox);
             this.Controls.Add(this.AttackButton);
             this.Controls.Add(this.enemiesDropList);
@@ -186,6 +211,8 @@ namespace GADE_TASK_2
         private System.Windows.Forms.ComboBox enemiesDropList;
         private System.Windows.Forms.Button AttackButton;
         private System.Windows.Forms.RichTextBox logBox;
+        private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Button LoadButton;
     }
 }
 

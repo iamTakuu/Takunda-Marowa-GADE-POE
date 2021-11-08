@@ -10,6 +10,7 @@ namespace GADE_TASK_2
     /// <summary>
     /// Merely exists to denote an empty tiel boi
     /// </summary>
+    [Serializable]
     class EmptyTile : Tile
     {
         public EmptyTile(int x, int y) : base(x, y, '.')

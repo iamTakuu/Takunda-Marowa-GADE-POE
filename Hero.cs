@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 //Takunda Marowa 20123325
 namespace GADE_TASK_2
 {
+    [Serializable]
     class Hero : Character
     {
         public Hero(int x, int y, int startHP) : base(x, y, 'H', startHP, 2)

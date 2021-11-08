@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 //Takunda Marowa 20123325
 namespace GADE_TASK_2
@@ -10,6 +13,7 @@ namespace GADE_TASK_2
     /// <summary>
     /// The GameEngine. Runs most of the game's logic, Passing all info to the form.
     /// </summary>
+    [Serializable]
     class GameEngine
     {
         private Map gameMap = new Map(10, 15, 10, 15, 4, 3);
@@ -17,13 +21,15 @@ namespace GADE_TASK_2
         public Map GameMap
         {
             get { return gameMap; }
+            set { gameMap = value; }
         }
-
-       /// <summary>
-       /// Validates an input direction, then moves according to said valid direction, clearing the player's previous postion.
-       /// </summary>
-       /// <param name="direction"></param>
-       /// <returns></returns>
+        private Stream stream;
+        private IFormatter formatter = new BinaryFormatter();
+        /// <summary>
+        /// Validates an input direction, then moves according to said valid direction, clearing the player's previous postion.
+        /// </summary>
+        /// <param name="direction"></param>
+        /// <returns></returns>
         public bool MovePlayer(Character.MovementEnum direction)
         {
             
@@ -140,7 +146,20 @@ namespace GADE_TASK_2
             GameMap.UpdateMap();
             UpdateEngine();
         }
+        public void Save()
+        {
+            
+            stream = new FileStream(AppDomain.CurrentDomain.BaseDirectory + "Save.dat", FileMode.Create, FileAccess.Write); //https://www.guru99.com/c-sharp-serialization.html
 
+            formatter.Serialize(stream, GameMap);
+            stream.Close();
+        }
+        public void Load()
+        {
+            stream = new FileStream(AppDomain.CurrentDomain.BaseDirectory + "Save.dat", FileMode.Create, FileAccess.Write); //https://www.guru99.com/c-sharp-serialization.html
+            GameMap = (Map)formatter.Deserialize(stream);
+            UpdateEngine();
+        }
         /// <summary>
         /// Updates game state.
         /// </summary>

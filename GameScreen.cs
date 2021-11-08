@@ -142,5 +142,10 @@ namespace GADE_TASK_2
         {
             AttackButton.Enabled=true;
         }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            gameEngine.Save();
+        }
     }
 }

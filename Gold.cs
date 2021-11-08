@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GADE_TASK_2
 {
+    [Serializable]
     class Gold : Item
     {
         private int goldCount;

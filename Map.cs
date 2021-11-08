@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 //Takunda Marowa 20123325
 namespace GADE_TASK_2
 {
+    [Serializable]
     class Map
     {
         public Tile[,] tileArray2D;
@@ -24,6 +25,7 @@ namespace GADE_TASK_2
 
         public Map(int minHeight, int maxHeight, int minWidth, int maxWidth, int enemyCount, int goldCount)
         {
+            
             this.height = rand.Next(minHeight, maxHeight);
             this.width = rand.Next(minWidth, maxWidth);
             

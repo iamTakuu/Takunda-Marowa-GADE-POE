@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 //Takunda Marowa 20123325
 namespace GADE_TASK_2
 {
+    [Serializable]
     abstract class Tile
     {
         protected int X;

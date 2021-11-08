@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 //Takunda Marowa 20123325
 namespace GADE_TASK_2
 {
+    [Serializable]
     /// <summary>
     /// The Character Class. Used to create enemies and the player.
     /// </summary>
