@@ -156,8 +156,9 @@ namespace GADE_TASK_2
         }
         public void Load()
         {
-            stream = new FileStream(AppDomain.CurrentDomain.BaseDirectory + "Save.dat", FileMode.Create, FileAccess.Write); //https://www.guru99.com/c-sharp-serialization.html
+            stream = new FileStream(AppDomain.CurrentDomain.BaseDirectory + "Save.dat", FileMode.Open, FileAccess.Read); //https://www.guru99.com/c-sharp-serialization.html
             GameMap = (Map)formatter.Deserialize(stream);
+            stream.Close();
             UpdateEngine();
         }
         /// <summary>

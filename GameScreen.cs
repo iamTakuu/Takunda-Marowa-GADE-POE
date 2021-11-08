@@ -147,5 +147,11 @@ namespace GADE_TASK_2
         {
             gameEngine.Save();
         }
+
+        private void LoadButton_Click(object sender, EventArgs e)
+        {
+            gameEngine.Load();
+            UpdateForm();
+        }
     }
 }

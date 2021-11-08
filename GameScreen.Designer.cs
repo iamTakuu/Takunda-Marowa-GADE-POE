@@ -172,6 +172,7 @@ namespace GADE_TASK_2
             this.LoadButton.TabIndex = 10;
             this.LoadButton.Text = "Load";
             this.LoadButton.UseVisualStyleBackColor = true;
+            this.LoadButton.Click += new System.EventHandler(this.LoadButton_Click);
             // 
             // GameScreen
             // 
