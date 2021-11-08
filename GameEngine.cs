@@ -104,7 +104,9 @@ namespace GADE_TASK_2
             return false;
             
         }
-
+        /// <summary>
+        /// Allows enemies to move, Identifing which can move and which can not.
+        /// </summary>
         public void MoveEnemies()
         {
             GameMap.UpdateVision();
@@ -119,7 +121,9 @@ namespace GADE_TASK_2
             GameMap.UpdateMap();
             UpdateEngine();
         }
-
+        /// <summary>
+        /// Allows the enemies to attack. 
+        /// </summary>
         public void EnemiesAttack()
         {
             GameMap.UpdateVision();
@@ -157,6 +161,9 @@ namespace GADE_TASK_2
             formatter.Serialize(stream, GameMap);
             stream.Close();
         }
+        /// <summary>
+        /// Allows the game to be Reloaded. Save location is: \bin\debug (within project file.)
+        /// </summary>
         public void Load()
         {
             stream = new FileStream(AppDomain.CurrentDomain.BaseDirectory + "Save.dat", FileMode.Open, FileAccess.Read); //https://www.guru99.com/c-sharp-serialization.html
