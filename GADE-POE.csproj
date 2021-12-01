@@ -71,6 +71,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="RangedWeapon.cs" />
     <Compile Include="Tile.cs" />
     <Compile Include="Weapon.cs" />
     <EmbeddedResource Include="GameScreen.resx">

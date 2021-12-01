@@ -8,17 +8,17 @@ namespace GADE_POE
 {
     class MeleeWeapon : Weapon
     {
-        public MeleeWeapon(WeaponType type, int x = 0, int y = 0) : base(x, y)
+        public MeleeWeapon(MeleeType type, int x = 0, int y = 0) : base(x, y)
         {
             switch (type)
             {
-                case WeaponType.Dagger:
+                case MeleeType.Dagger:
                     this.WeaponTypeString = "Dagger";
                     this.Durability = 10;
                     this.Damage = 3;
                     this.Cost = 3;
                     break;
-                case WeaponType.Longsword:
+                case MeleeType.Longsword:
                     this.WeaponTypeString = "Longsword";
                     this.Durability = 6;
                     this.Damage = 4;
@@ -37,7 +37,7 @@ namespace GADE_POE
         {
             throw new NotImplementedException();
         }
-        public enum WeaponType
+        public enum MeleeType
         {
             Dagger,
             Longsword
