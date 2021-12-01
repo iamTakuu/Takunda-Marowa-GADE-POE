@@ -8,7 +8,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
 //Takunda Marowa 20123325
-namespace GADE_TASK_2
+namespace GADE_POE
 {
     /// <summary>
     /// The GameEngine. Runs most of the game's logic, Passing all info to the form.

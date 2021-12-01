@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GADE_TASK_2
+namespace GADE_POE
 {
     [Serializable]
     abstract class Item : Tile

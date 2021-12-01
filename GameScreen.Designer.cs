@@ -1,5 +1,5 @@
 ﻿
-namespace GADE_TASK_2
+namespace GADE_POE
 {
     partial class GameScreen
     {

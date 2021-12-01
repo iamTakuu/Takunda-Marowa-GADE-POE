@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 //Takunda Marowa 20123325
-namespace GADE_TASK_2
+namespace GADE_POE
 {
     /// <summary>
     /// Merely exists to denote an empty tiel boi

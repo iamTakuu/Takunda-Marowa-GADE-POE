@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GADE_TASK_2
+namespace GADE_POE
 {
     static class Program
     {
