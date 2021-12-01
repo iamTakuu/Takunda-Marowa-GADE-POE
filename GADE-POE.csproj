@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{8036F228-15D8-4192-996F-C99A68CA0E3B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>GADE_TASK_2</RootNamespace>
-    <AssemblyName>GADE-TASK-2</AssemblyName>
+    <RootNamespace>GADE_POE</RootNamespace>
+    <AssemblyName>GADE-POE</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
