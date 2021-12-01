@@ -153,5 +153,11 @@ namespace GADE_POE
             gameEngine.Load();
             UpdateForm();
         }
+
+        private void logBox_TextChanged(object sender, EventArgs e)
+        {
+            logBox.SelectionStart = logBox.Text.Length;
+            logBox.ScrollToCaret();
+        }
     }
 }

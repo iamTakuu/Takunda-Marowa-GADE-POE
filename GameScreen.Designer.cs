@@ -120,6 +120,7 @@ namespace GADE_POE
             // enemiesDropList
             // 
             this.enemiesDropList.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.enemiesDropList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.enemiesDropList.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.enemiesDropList.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enemiesDropList.FormattingEnabled = true;
@@ -127,7 +128,6 @@ namespace GADE_POE
             this.enemiesDropList.Name = "enemiesDropList";
             this.enemiesDropList.Size = new System.Drawing.Size(276, 23);
             this.enemiesDropList.TabIndex = 6;
-            this.enemiesDropList.Text = "Select a Target:";
             this.enemiesDropList.SelectedIndexChanged += new System.EventHandler(this.enemiesDropList_SelectedIndexChanged);
             // 
             // AttackButton
@@ -151,6 +151,7 @@ namespace GADE_POE
             this.logBox.Size = new System.Drawing.Size(276, 96);
             this.logBox.TabIndex = 8;
             this.logBox.Text = "Log:";
+            this.logBox.TextChanged += new System.EventHandler(this.logBox_TextChanged);
             // 
             // SaveButton
             // 
