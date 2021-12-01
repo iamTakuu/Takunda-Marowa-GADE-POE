@@ -123,7 +123,7 @@ namespace GADE_POE
         private int DistanceTo(Character target)
         {
             int totalDist;
-            totalDist = (Math.Abs(target.Y - Y)) + Math.Abs((target.X - X));
+            totalDist = (Math.Abs(target.Y_ - Y_)) + Math.Abs((target.X_ - X_));
             return (totalDist);
         }
 
