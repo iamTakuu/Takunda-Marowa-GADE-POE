@@ -17,7 +17,7 @@ namespace GADE_POE
     class GameEngine
     {
         private Map gameMap = new Map(10, 15, 10, 15, 4, 3);
-        
+        private Shop shop = new Shop();
         public Map GameMap
         {
             get { return gameMap; }

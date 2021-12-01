@@ -58,12 +58,12 @@ namespace GADE_POE
         {
             throw new NotImplementedException();
         }
+        public enum RangedTypes
+        {
+            Rifle,
+            Longbow
+        }
 
     }
     
-    public enum RangedTypes
-    {
-        Rifle,
-        Longbow
-    }
 }
