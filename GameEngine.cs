@@ -130,7 +130,7 @@ namespace GADE_POE
             for (int i = 0; i < GameMap.enemiesArray.Length; i++)
 
             {
-                if (GameMap.enemiesArray[i].GetType() == typeof(Goblin))
+                if (GameMap.enemiesArray[i].GetType() == typeof(Goblin) || GameMap.enemiesArray[i].GetType() == typeof(Leader))
                 {
                     GameMap.enemiesArray[i].Attack(GameMap.hero);
                 }

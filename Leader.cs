@@ -44,59 +44,121 @@ namespace GADE_POE
 
         private MovementEnum MoveTowards()
         {
-            int xDist = X_ - LeaderTarget.X_;
-            int yDist = Y_ - LeaderTarget.Y_;
-            if (Math.Abs(yDist) <= Math.Abs(xDist)) //Vertical Distance shorter than Horizontal
+            //int xDist = X_ - LeaderTarget.X_;
+            //int yDist = Y_ - LeaderTarget.Y_;
+            int xDist = LeaderTarget.X_ - X_;
+            int yDist = LeaderTarget.Y_ - Y_;
+
+            //if (Math.Abs(this.Y_ - LeaderTarget.Y_) <= Math.Abs(LeaderTarget.Y_ - this.Y_)) //Up less than down
+            //{
+            //    if (characterVision[0].GetType() == typeof(EmptyTile) || characterVision[0].GetType().BaseType == typeof(Item)) // If the chosen direction is occupied
+            //    {
+            //        return MovementEnum.Up;
+            //    }
+            //    else
+            //    {
+            //        return (RandomDirection());
+            //    }
+            //}
+            //else if(Math.Abs(this.Y_ - LeaderTarget.Y_) >= Math.Abs(LeaderTarget.Y_ - this.Y_)) //Down less than up
+            //{
+            //    //Move Down
+            //    if (characterVision[2].GetType() == typeof(EmptyTile) || characterVision[2].GetType().BaseType == typeof(Item)) // If the chosen direction is occupied
+            //    {
+
+            //        return MovementEnum.Down;
+
+            //    }
+            //    else
+            //    {
+            //        return (RandomDirection());
+            //    }
+            //}else if ( (Math.Abs(this.X_ - LeaderTarget.X_) <= Math.Abs(LeaderTarget.X_ - this.X_)) ) //Left less than right
+            //{
+            //    if (characterVision[3].GetType() == typeof(EmptyTile) || characterVision[3].GetType().BaseType == typeof(Item)) // If the chosen direction is occupied
+            //    {
+            //        return MovementEnum.Left;
+            //    }
+            //    else
+            //    {
+            //        return (RandomDirection());
+            //    }
+
+            //}else if ((Math.Abs(this.X_ - LeaderTarget.X_) >= Math.Abs(LeaderTarget.X_ - this.X_))) //Rigth less than left
+            //{
+            //    if (characterVision[1].GetType() == typeof(EmptyTile) || characterVision[1].GetType().BaseType == typeof(Item)) // If the chosen direction is occupied
+            //    {
+            //        return MovementEnum.Right;
+            //    }
+            //    else
+            //    {
+            //        return (RandomDirection());
+            //    }
+            //}
+
+            //return MovementEnum.NoMovement;
+
+
+
+
+
+            if (Math.Abs(yDist) == Math.Abs(xDist))
+            {
+                return MovementEnum.NoMovement;
+            }
+            if (Math.Abs(yDist) < Math.Abs(xDist)) //Vertical Distance shorter than Horizontal
             {
                 if (yDist < 0) //Target is above
                 {
                     //Move up
-                    if (characterVision[0].GetType() != typeof(EmptyTile)) // If the chosen direction is occupied
+                    if (characterVision[0].GetType() == typeof(EmptyTile) || characterVision[0].GetType().BaseType == typeof(Item)) // If the chosen direction is occupied
                     {
-                        return(RandomDirection());
+                        return MovementEnum.Up;
                     }
                     else
                     {
-                        return MovementEnum.Up;
+                        return (RandomDirection());
                     }
                 }
                 else
                 {
                     //Move Down
-                    if (characterVision[2].GetType() != typeof(EmptyTile)) // If the chosen direction is occupied
+                    if (characterVision[2].GetType() == typeof(EmptyTile) || characterVision[2].GetType().BaseType == typeof(Item)) // If the chosen direction is occupied
                     {
-                        return (RandomDirection());
+
+                        return MovementEnum.Down;
+
                     }
                     else
                     {
-                        return MovementEnum.Down;
+                        return (RandomDirection());
                     }
                 }
             }
-            else if(Math.Abs(xDist) <= Math.Abs(yDist)) //Horizontal Distance shorter
+            else if (Math.Abs(xDist) < Math.Abs(yDist)) //Horizontal Distance shorter
             {
                 if (xDist < 0) //Target is right
                 {
                     //Move right
-                    if (characterVision[1].GetType() != typeof(EmptyTile)) // If the chosen direction is occupied
+                    if (characterVision[1].GetType() == typeof(EmptyTile) || characterVision[1].GetType().BaseType == typeof(Item)) // If the chosen direction is occupied
                     {
-                        return (RandomDirection());
+                        return MovementEnum.Right;
                     }
                     else
                     {
-                        return MovementEnum.Right;
+                        return (RandomDirection());
                     }
                 }
                 else
                 {
                     //Move left
-                    if (characterVision[3].GetType() != typeof(EmptyTile)) // If the chosen direction is occupied
+                    if (characterVision[3].GetType() == typeof(EmptyTile) || characterVision[3].GetType().BaseType == typeof(Item)) // If the chosen direction is occupied
                     {
-                        return (RandomDirection());
+                        return MovementEnum.Left;
                     }
                     else
                     {
-                        return MovementEnum.Left;
+                        return (RandomDirection());
                     }
                 }
             }

@@ -60,7 +60,7 @@ namespace GADE_POE
             // playerInfoGroup
             // 
             this.playerInfoGroup.Controls.Add(this.statsLabel);
-            this.playerInfoGroup.Location = new System.Drawing.Point(524, 61);
+            this.playerInfoGroup.Location = new System.Drawing.Point(671, 95);
             this.playerInfoGroup.Name = "playerInfoGroup";
             this.playerInfoGroup.Size = new System.Drawing.Size(239, 147);
             this.playerInfoGroup.TabIndex = 1;
@@ -79,7 +79,7 @@ namespace GADE_POE
             // 
             // UpButton
             // 
-            this.UpButton.Location = new System.Drawing.Point(599, 245);
+            this.UpButton.Location = new System.Drawing.Point(746, 279);
             this.UpButton.Name = "UpButton";
             this.UpButton.Size = new System.Drawing.Size(91, 29);
             this.UpButton.TabIndex = 2;
@@ -89,7 +89,7 @@ namespace GADE_POE
             // 
             // DownButton
             // 
-            this.DownButton.Location = new System.Drawing.Point(599, 315);
+            this.DownButton.Location = new System.Drawing.Point(746, 349);
             this.DownButton.Name = "DownButton";
             this.DownButton.Size = new System.Drawing.Size(91, 29);
             this.DownButton.TabIndex = 3;
@@ -99,7 +99,7 @@ namespace GADE_POE
             // 
             // LeftButton
             // 
-            this.LeftButton.Location = new System.Drawing.Point(508, 280);
+            this.LeftButton.Location = new System.Drawing.Point(655, 314);
             this.LeftButton.Name = "LeftButton";
             this.LeftButton.Size = new System.Drawing.Size(91, 29);
             this.LeftButton.TabIndex = 4;
@@ -109,7 +109,7 @@ namespace GADE_POE
             // 
             // RightButton
             // 
-            this.RightButton.Location = new System.Drawing.Point(688, 280);
+            this.RightButton.Location = new System.Drawing.Point(835, 314);
             this.RightButton.Name = "RightButton";
             this.RightButton.Size = new System.Drawing.Size(91, 29);
             this.RightButton.TabIndex = 5;
@@ -124,7 +124,7 @@ namespace GADE_POE
             this.enemiesDropList.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.enemiesDropList.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enemiesDropList.FormattingEnabled = true;
-            this.enemiesDropList.Location = new System.Drawing.Point(242, 70);
+            this.enemiesDropList.Location = new System.Drawing.Point(389, 104);
             this.enemiesDropList.Name = "enemiesDropList";
             this.enemiesDropList.Size = new System.Drawing.Size(276, 23);
             this.enemiesDropList.TabIndex = 6;
@@ -134,7 +134,7 @@ namespace GADE_POE
             // 
             this.AttackButton.Enabled = false;
             this.AttackButton.Font = new System.Drawing.Font("OCR A Extended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AttackButton.Location = new System.Drawing.Point(306, 115);
+            this.AttackButton.Location = new System.Drawing.Point(453, 149);
             this.AttackButton.Name = "AttackButton";
             this.AttackButton.Size = new System.Drawing.Size(103, 36);
             this.AttackButton.TabIndex = 7;
@@ -145,7 +145,7 @@ namespace GADE_POE
             // logBox
             // 
             this.logBox.Font = new System.Drawing.Font("OCR A Extended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logBox.Location = new System.Drawing.Point(242, 178);
+            this.logBox.Location = new System.Drawing.Point(389, 212);
             this.logBox.Name = "logBox";
             this.logBox.ReadOnly = true;
             this.logBox.Size = new System.Drawing.Size(276, 96);
@@ -156,7 +156,7 @@ namespace GADE_POE
             // SaveButton
             // 
             this.SaveButton.Font = new System.Drawing.Font("Consolas", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveButton.Location = new System.Drawing.Point(297, 315);
+            this.SaveButton.Location = new System.Drawing.Point(444, 349);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(121, 40);
             this.SaveButton.TabIndex = 9;
@@ -167,7 +167,7 @@ namespace GADE_POE
             // LoadButton
             // 
             this.LoadButton.Font = new System.Drawing.Font("Consolas", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoadButton.Location = new System.Drawing.Point(297, 371);
+            this.LoadButton.Location = new System.Drawing.Point(444, 405);
             this.LoadButton.Name = "LoadButton";
             this.LoadButton.Size = new System.Drawing.Size(121, 40);
             this.LoadButton.TabIndex = 10;
@@ -179,7 +179,7 @@ namespace GADE_POE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1038, 556);
             this.Controls.Add(this.LoadButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.logBox);
