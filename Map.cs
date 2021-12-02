@@ -23,7 +23,7 @@ namespace GADE_POE
         private Random rand = new Random();
 
 
-        public Map(int minHeight, int maxHeight, int minWidth, int maxWidth, int enemyCount, int goldCount)
+        public Map(int minHeight, int maxHeight, int minWidth, int maxWidth, int enemyCount, int goldCount, int weaponCount)
         {
             
             this.height = rand.Next(minHeight, maxHeight);
@@ -36,7 +36,7 @@ namespace GADE_POE
             MapArray = new char[width, height];
             
             enemiesArray = new Enemy[enemyCount];
-            itemsArray = new Item[goldCount];
+            itemsArray = new Item[goldCount+weaponCount];
 
             hero = (Hero)Create(Tile.TileType.Hero); //Basically promising that I'll send back a Hero
 
@@ -50,9 +50,14 @@ namespace GADE_POE
                 tileArray2D[enemiesArray[i].X_, enemiesArray[i].Y_] = enemiesArray[i]; //Adding the created enemy to the Tile Array
             }
 
-            for (int i = 0; i < itemsArray.Length; i++)
+            for (int i = 0; i < goldCount; i++)
             {
                 itemsArray[i] = (Item)Create(Tile.TileType.Gold);
+                tileArray2D[itemsArray[i].X_, itemsArray[i].Y_] = itemsArray[i];
+            }
+            for (int i = goldCount; i < weaponCount; i++)
+            {
+                itemsArray[i] = (Item)Create(Tile.TileType.Weapon);
                 tileArray2D[itemsArray[i].X_, itemsArray[i].Y_] = itemsArray[i];
             }
             
@@ -310,6 +315,7 @@ namespace GADE_POE
             int x = 0;
             int y = 0;
             int enemyID = 0;
+            
             switch (type)
             {
                 case Tile.TileType.Hero:
@@ -330,6 +336,7 @@ namespace GADE_POE
 
                     return new Gold(x, y);
 
+
                 case Tile.TileType.Enemy:
                     do
                     {
@@ -347,10 +354,30 @@ namespace GADE_POE
                     {
                         return new Mage(x, y);
                     }
-                    
 
+                case Tile.TileType.Weapon:
+                    
+                    do
+                    {
+                        x = rand.Next(0, width);
+                        y = rand.Next(0, height);
+                    } while (CheckCoord(x, y));
+
+                    int typeID = rand.Next(0, 2);
+                    switch (typeID)
+                    {
+                        case 0: //Melee
+                            return new MeleeWeapon( (MeleeWeapon.MeleeType)rand.Next(0, 2), x, y);
+                        case 1:
+                            return new RangedWeapon((RangedWeapon.RangedTypes)rand.Next(0, 2), x, y);
+                        default:
+                            return null;
+
+                    }
+                    //break;
                 default:
                     return new Hero(-1, -1, -1); //Invalid argunment (temporary)
+                    
             }
 
         }
