@@ -8,6 +8,7 @@ namespace GADE_POE
 {
     class MeleeWeapon : Weapon
     {
+        public override int Range { get { return 1; }}
         public MeleeWeapon(MeleeType type, int x = 0, int y = 0) : base(x, y)
         {
             switch (type)
@@ -28,7 +29,6 @@ namespace GADE_POE
                     break;
             }
         }
-        public override int Range { get { return range; } set { range = 1; } }
         //public MeleeWeapon(int x = 0, int y = 0, char symbol = 'W') : base(x, y, symbol)
         //{
         //}

@@ -128,5 +128,9 @@ namespace GADE_POE
                     return MovementEnum.NoMovement;
             }
         }
+        public override string ToString()
+        {
+            return "Leader " + base.ToString(); //Simply adds the word "Leader" to the enemy output.
+        }
     }
 }

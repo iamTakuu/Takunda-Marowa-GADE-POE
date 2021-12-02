@@ -55,7 +55,7 @@ namespace GADE_POE
                 itemsArray[i] = (Item)Create(Tile.TileType.Gold);
                 tileArray2D[itemsArray[i].X_, itemsArray[i].Y_] = itemsArray[i];
             }
-            for (int i = goldCount; i < weaponCount; i++)
+            for (int i = goldCount; i < itemsArray.Length; i++)
             {
                 itemsArray[i] = (Item)Create(Tile.TileType.Weapon);
                 tileArray2D[itemsArray[i].X_, itemsArray[i].Y_] = itemsArray[i];
@@ -214,6 +214,10 @@ namespace GADE_POE
                     {
                         MapArray[x, y] = tileArray2D[x, y].Symbol_;
                     }
+                    else if (tileArray2D[x,y].GetType().BaseType == typeof(Weapon))
+                    {
+                        MapArray[x, y] = tileArray2D[x, y].Symbol_;
+                    }
                     else if (tileArray2D[x,y].GetType() == typeof(Obstacle))
                     {
                         MapArray[x,y] = wall.Symbol_;
@@ -345,15 +349,20 @@ namespace GADE_POE
                     } while (CheckCoord(x, y));
 
                     //Allows random generation of Goblin or Mage
-                    enemyID = rand.Next(1, 3);
-                    if (enemyID == 1)
+                    enemyID = rand.Next(0, 3);
+                    switch (enemyID)
                     {
-                        return new Goblin(x, y);
+                        case 0:
+                            return new Goblin(x, y);
+                        case 1:
+                            return new Mage(x, y);
+                        case 2:
+                            return new Leader(x, y, hero);
+                        default:
+                            return null;
+                            
                     }
-                    else
-                    {
-                        return new Mage(x, y);
-                    }
+                    
 
                 case Tile.TileType.Weapon:
                     

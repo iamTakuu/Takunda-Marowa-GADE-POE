@@ -16,8 +16,8 @@ namespace GADE_POE
     [Serializable]
     class GameEngine
     {
-        private Map gameMap = new Map(10, 15, 10, 15, 4, 3);
-        private Shop shop = new Shop();
+        private Map gameMap = new Map(15, 20, 15, 20, 5, 3, 2);
+        //private Shop shop = new Shop();
         public Map GameMap
         {
             get { return gameMap; }
@@ -112,7 +112,7 @@ namespace GADE_POE
             GameMap.UpdateVision();
             for (int i = 0; i < GameMap.enemiesArray.Length; i++)
             {
-                if (GameMap.enemiesArray[i].GetType() == typeof(Goblin))
+                if (GameMap.enemiesArray[i].GetType() == typeof(Goblin) || GameMap.enemiesArray[i].GetType() == typeof(Leader))
                 {
                     GameMap.enemiesArray[i].Move(GameMap.enemiesArray[i].ReturnMove());
                 }
