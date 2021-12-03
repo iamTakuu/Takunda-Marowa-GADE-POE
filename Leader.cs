@@ -56,7 +56,7 @@ namespace GADE_POE
                 if (LeaderTarget.Y_ < this.Y_) //Target is above
                 {
                     //Move up
-                    if (characterVision[0].GetType() == typeof(EmptyTile) || characterVision[0].GetType().BaseType == typeof(Item) && characterVision[0].GetType().BaseType != typeof(Enemy)) // If the chosen direction is occupied
+                    if (characterVision[0].GetType() != typeof(Obstacle) && characterVision[0].GetType().BaseType != typeof(Enemy) && characterVision[0].GetType() != typeof(Hero)) // If the chosen direction is occupied
                     {
                         return MovementEnum.Up;
                     }
@@ -68,7 +68,7 @@ namespace GADE_POE
                 else
                 {
                     //Move Down
-                    if (characterVision[2].GetType() == typeof(EmptyTile) || characterVision[2].GetType().BaseType == typeof(Item) && characterVision[2].GetType().BaseType != typeof(Enemy)) // If the chosen direction is occupied
+                    if (characterVision[2].GetType() != typeof(Obstacle) && characterVision[2].GetType().BaseType != typeof(Enemy) && characterVision[2].GetType() != typeof(Hero)) // If the chosen direction is occupied
                     {
 
                         return MovementEnum.Down;
@@ -85,7 +85,7 @@ namespace GADE_POE
                 if (LeaderTarget.X_ > this.X_)
                 {
                     //Move right
-                    if (characterVision[1].GetType() == typeof(EmptyTile) || characterVision[1].GetType().BaseType == typeof(Item) && characterVision[1].GetType().BaseType != typeof(Enemy)) // If the chosen direction is occupied
+                    if (characterVision[1].GetType() != typeof(Obstacle) && characterVision[1].GetType().BaseType != typeof(Enemy) && characterVision[1].GetType() != typeof(Hero)) // If the chosen direction is occupied
                     {
                         return MovementEnum.Right;
                     }
@@ -97,7 +97,7 @@ namespace GADE_POE
                 else
                 {
                     //Move left
-                    if (characterVision[3].GetType() == typeof(EmptyTile) || characterVision[3].GetType().BaseType == typeof(Item) && characterVision[1].GetType().BaseType != typeof(Enemy)) // If the chosen direction is occupied
+                    if (characterVision[3].GetType() != typeof(Obstacle) && characterVision[1].GetType().BaseType != typeof(Enemy) && characterVision[3].GetType() != typeof(Hero)) // If the chosen direction is occupied
                     {
                         return MovementEnum.Left;
                     }
@@ -109,16 +109,13 @@ namespace GADE_POE
 
             }
 
-            //if (Math.Abs(yDist) == Math.Abs(xDist))
-            //{
-            //    return MovementEnum.NoMovement;
-            //}
+            
             if (Math.Abs(yDist) < Math.Abs(xDist)) //Vertical Distance shorter than Horizontal
             {
                 if (yDist < 0) //Target is above
                 {
                     //Move up
-                    if (characterVision[0].GetType() == typeof(EmptyTile) || characterVision[0].GetType().BaseType == typeof(Item) && characterVision[0].GetType().BaseType != typeof(Enemy)) // If the chosen direction is occupied
+                    if (characterVision[0].GetType() != typeof(Obstacle) && characterVision[0].GetType().BaseType != typeof(Enemy) && characterVision[0].GetType() != typeof(Hero) ) // If the chosen direction is occupied
                     {
                         return MovementEnum.Up;
                     }
@@ -130,7 +127,7 @@ namespace GADE_POE
                 else
                 {
                     //Move Down
-                    if (characterVision[2].GetType() == typeof(EmptyTile) || characterVision[2].GetType().BaseType == typeof(Item) && characterVision[2].GetType().BaseType != typeof(Enemy)) // If the chosen direction is occupied
+                    if (characterVision[2].GetType() != typeof(Obstacle) && characterVision[2].GetType().BaseType != typeof(Enemy) && characterVision[2].GetType() != typeof(Hero)) // If the chosen direction is occupied
                     {
 
                         return MovementEnum.Down;
@@ -147,7 +144,7 @@ namespace GADE_POE
                 if (xDist < 0) //Target is right
                 {
                     //Move right
-                    if (characterVision[1].GetType() == typeof(EmptyTile) || characterVision[1].GetType().BaseType == typeof(Item) && characterVision[1].GetType().BaseType != typeof(Enemy)) // If the chosen direction is occupied
+                    if (characterVision[1].GetType() != typeof(Obstacle) && characterVision[1].GetType().BaseType != typeof(Enemy) && characterVision[1].GetType() != typeof(Hero)) // If the chosen direction is occupied
                     {
                         return MovementEnum.Right;
                     }
@@ -159,7 +156,7 @@ namespace GADE_POE
                 else
                 {
                     //Move left
-                    if (characterVision[3].GetType() == typeof(EmptyTile) || characterVision[3].GetType().BaseType == typeof(Item) && characterVision[3].GetType().BaseType != typeof(Enemy)) // If the chosen direction is occupied
+                    if (characterVision[3].GetType() != typeof(Obstacle) && characterVision[3].GetType().BaseType != typeof(Enemy) && characterVision[3].GetType() != typeof(Hero)) // If the chosen direction is occupied
                     {
                         return MovementEnum.Left;
                     }

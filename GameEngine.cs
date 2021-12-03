@@ -146,8 +146,8 @@ namespace GADE_POE
                             break;
                     }
                     GameMap.enemiesArray[i].Move(GameMap.enemiesArray[i].ReturnMove());
+                    GameMap.UpdateVision();
                 }
-                GameMap.UpdateVision();
             }
             
             GameMap.UpdateMap();
@@ -208,6 +208,7 @@ namespace GADE_POE
         /// </summary>
         public void UpdateEngine()
         {
+            GameMap.UpdateVision();
             GameMap.RemoveDead();
             GameMap.UpdateMap();
         }
