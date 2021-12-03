@@ -114,8 +114,40 @@ namespace GADE_POE
             {
                 if (GameMap.enemiesArray[i].GetType() == typeof(Goblin) || GameMap.enemiesArray[i].GetType() == typeof(Leader))
                 {
+                    switch (GameMap.enemiesArray[i].ReturnMove())
+                    {
+                        case Character.MovementEnum.NoMovement:
+                            break;
+                        case Character.MovementEnum.Up:
+                            if (GameMap.enemiesArray[i].characterVision[0].GetType().BaseType == typeof(Item))
+                            {
+                                GameMap.enemiesArray[i].Pickup(GameMap.GetItemAtPosition(GameMap.enemiesArray[i].characterVision[0].X_, GameMap.enemiesArray[i].characterVision[0].Y_));
+                            }
+                            break;
+                        case Character.MovementEnum.Right:
+                            if (GameMap.enemiesArray[i].characterVision[1].GetType().BaseType == typeof(Item))
+                            {
+                                GameMap.enemiesArray[i].Pickup(GameMap.GetItemAtPosition(GameMap.enemiesArray[i].characterVision[1].X_, GameMap.enemiesArray[i].characterVision[1].Y_));
+                            }
+                            break;
+                        case Character.MovementEnum.Down:
+                            if (GameMap.enemiesArray[i].characterVision[2].GetType().BaseType == typeof(Item))
+                            {
+                                GameMap.enemiesArray[i].Pickup(GameMap.GetItemAtPosition(GameMap.enemiesArray[i].characterVision[2].X_, GameMap.enemiesArray[i].characterVision[2].Y_));
+                            }
+                            break;
+                        case Character.MovementEnum.Left:
+                            if (GameMap.enemiesArray[i].characterVision[3].GetType().BaseType == typeof(Item))
+                            {
+                                GameMap.enemiesArray[i].Pickup(GameMap.GetItemAtPosition(GameMap.enemiesArray[i].characterVision[3].X_, GameMap.enemiesArray[i].characterVision[3].Y_));
+                            }
+                            break;
+                        default:
+                            break;
+                    }
                     GameMap.enemiesArray[i].Move(GameMap.enemiesArray[i].ReturnMove());
                 }
+                GameMap.UpdateVision();
             }
             
             GameMap.UpdateMap();

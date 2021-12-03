@@ -17,6 +17,9 @@ namespace GADE_POE
         protected int maxHP;
         protected int damage;
         private int goldPurse_;
+        protected Weapon weaponInventory;
+
+        public Weapon CharWeapon { get { return weaponInventory; } }
         public int GoldPurse
         {
             get

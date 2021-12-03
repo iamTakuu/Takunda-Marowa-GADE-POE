@@ -26,26 +26,26 @@ namespace GADE_POE
                 case MovementEnum.NoMovement:
                     return MovementEnum.NoMovement;
                 case MovementEnum.Up:
-                    if (characterVision[0].GetType() == typeof(EmptyTile) || characterVision[0].GetType().BaseType == typeof(Item) && characterVision[0].GetType().BaseType != typeof(Enemy))
+                    if (characterVision[0].GetType() != typeof(Obstacle) && characterVision[0].GetType().BaseType != typeof(Enemy))
                     {
                         return MovementEnum.Up;
                     }
                     else return MovementEnum.NoMovement;
 
                 case MovementEnum.Right:
-                    if (characterVision[1].GetType() == typeof(EmptyTile) || characterVision[1].GetType().BaseType == typeof(Item) && characterVision[1].GetType().BaseType != typeof(Enemy))
+                    if (characterVision[1].GetType() != typeof(Obstacle) && characterVision[1].GetType().BaseType != typeof(Enemy))
                     {
                         return MovementEnum.Right;
                     }
                     else return MovementEnum.NoMovement;
                 case MovementEnum.Down:
-                    if (characterVision[2].GetType() == typeof(EmptyTile) || characterVision[2].GetType().BaseType == typeof(Item) && characterVision[2].GetType().BaseType != typeof(Enemy))
+                    if (characterVision[2].GetType() != typeof(Obstacle) && characterVision[2].GetType().BaseType != typeof(Enemy))
                     {
                         return MovementEnum.Down;
                     }
                     else return MovementEnum.NoMovement;
                 case MovementEnum.Left:
-                    if (characterVision[3].GetType() == typeof(EmptyTile) || characterVision[3].GetType().BaseType == typeof(Item) && characterVision[3].GetType().BaseType != typeof(Enemy))
+                    if (characterVision[3].GetType() != typeof(Obstacle) && characterVision[3].GetType().BaseType != typeof(Enemy))
                     {
                         return MovementEnum.Left;
                     }
