@@ -49,10 +49,10 @@ namespace GADE_POE
             this.mapLabel.AutoSize = true;
             this.mapLabel.BackColor = System.Drawing.SystemColors.HighlightText;
             this.mapLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.mapLabel.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mapLabel.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mapLabel.Location = new System.Drawing.Point(50, 48);
             this.mapLabel.Name = "mapLabel";
-            this.mapLabel.Size = new System.Drawing.Size(166, 170);
+            this.mapLabel.Size = new System.Drawing.Size(166, 178);
             this.mapLabel.TabIndex = 0;
             this.mapLabel.Text = "XXXXXXXXXXXXXX\r\nX......G.....X\r\nX......G.....X\r\nX............X\r\nX....G.G.....X\r\nX" +
     ".....GH.....X\r\nX............X\r\nXXXXXXXXXXXXXX";
@@ -179,7 +179,7 @@ namespace GADE_POE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1038, 556);
+            this.ClientSize = new System.Drawing.Size(1330, 523);
             this.Controls.Add(this.LoadButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.logBox);

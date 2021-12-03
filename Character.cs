@@ -17,6 +17,7 @@ namespace GADE_POE
         protected int maxHP;
         protected int damage;
         private int goldPurse_;
+        private int attackRange = 1;
         protected Weapon weaponInventory;
 
         public Weapon CharWeapon { get { return weaponInventory; } }
@@ -72,10 +73,22 @@ namespace GADE_POE
         /// <param name="i"></param>
         public void Pickup(Item i)
         {
+           
             if ( i.GetType() == typeof(Gold) )
             {
                 AddGold((Gold)i); //Need to typecast it.
+            }else if(i.GetType().BaseType == typeof(Weapon))
+            {
+                Equip((Weapon)i);
             }
+        }
+
+        private void Equip(Weapon i)
+        {
+            weaponInventory = i;
+            attackRange = weaponInventory.Range;
+            damage = weaponInventory.Damage;
+            //throw new NotImplementedException();
         }
 
         /// <summary>
@@ -108,7 +121,7 @@ namespace GADE_POE
         /// <returns></returns>
         public virtual bool CheckRange(Character target)
         {
-            if (DistanceTo(target) == 1) //Barehand range being 1
+            if (DistanceTo(target) <= attackRange) //Barehand range being 1
             {
                 return true;
                 

@@ -40,7 +40,7 @@ namespace GADE_POE
                 case Character.MovementEnum.Up:
                     if (GameMap.hero.ReturnMove(direction) == Character.MovementEnum.Up)
                     {
-                        if (GameMap.hero.characterVision[0].GetType().BaseType == typeof(Item))
+                        if (GameMap.hero.characterVision[0].GetType().BaseType == typeof(Item) || GameMap.hero.characterVision[0].GetType().BaseType == typeof(Weapon))
                         {
                             GameMap.hero.Pickup(GameMap.GetItemAtPosition(GameMap.hero.characterVision[0].X_, GameMap.hero.characterVision[0].Y_));
                         }
@@ -55,7 +55,7 @@ namespace GADE_POE
                 case Character.MovementEnum.Right:
                     if (GameMap.hero.ReturnMove(direction) == Character.MovementEnum.Right)
                     {
-                        if (GameMap.hero.characterVision[1].GetType().BaseType == typeof(Item))
+                        if (GameMap.hero.characterVision[1].GetType().BaseType == typeof(Item) || GameMap.hero.characterVision[1].GetType().BaseType == typeof(Weapon))
                         {
                             GameMap.hero.Pickup(GameMap.GetItemAtPosition(GameMap.hero.characterVision[1].X_, GameMap.hero.characterVision[1].Y_));
                         }
@@ -71,7 +71,7 @@ namespace GADE_POE
                 case Character.MovementEnum.Down:
                     if (GameMap.hero.ReturnMove(direction) == Character.MovementEnum.Down)
                     {
-                        if (GameMap.hero.characterVision[2].GetType().BaseType == typeof(Item))
+                        if (GameMap.hero.characterVision[2].GetType().BaseType == typeof(Item) || GameMap.hero.characterVision[2].GetType().BaseType == typeof(Weapon))
                         {
                             GameMap.hero.Pickup(GameMap.GetItemAtPosition(GameMap.hero.characterVision[2].X_, GameMap.hero.characterVision[2].Y_));
                         }
@@ -86,7 +86,7 @@ namespace GADE_POE
                 case Character.MovementEnum.Left:
                     if (GameMap.hero.ReturnMove(direction) == Character.MovementEnum.Left)
                     {
-                        if (GameMap.hero.characterVision[3].GetType().BaseType == typeof(Item))
+                        if (GameMap.hero.characterVision[3].GetType().BaseType == typeof(Item) || GameMap.hero.characterVision[3].GetType().BaseType == typeof(Weapon))
                         {
                             GameMap.hero.Pickup(GameMap.GetItemAtPosition(GameMap.hero.characterVision[3].X_, GameMap.hero.characterVision[3].Y_));
                         }
@@ -119,25 +119,25 @@ namespace GADE_POE
                         case Character.MovementEnum.NoMovement:
                             break;
                         case Character.MovementEnum.Up:
-                            if (GameMap.enemiesArray[i].characterVision[0].GetType().BaseType == typeof(Item))
+                            if (GameMap.enemiesArray[i].characterVision[0].GetType().BaseType == typeof(Item) || GameMap.enemiesArray[i].characterVision[0].GetType().BaseType == typeof(Weapon))
                             {
                                 GameMap.enemiesArray[i].Pickup(GameMap.GetItemAtPosition(GameMap.enemiesArray[i].characterVision[0].X_, GameMap.enemiesArray[i].characterVision[0].Y_));
                             }
                             break;
                         case Character.MovementEnum.Right:
-                            if (GameMap.enemiesArray[i].characterVision[1].GetType().BaseType == typeof(Item))
+                            if (GameMap.enemiesArray[i].characterVision[1].GetType().BaseType == typeof(Item) || GameMap.enemiesArray[i].characterVision[1].GetType().BaseType == typeof(Weapon))
                             {
                                 GameMap.enemiesArray[i].Pickup(GameMap.GetItemAtPosition(GameMap.enemiesArray[i].characterVision[1].X_, GameMap.enemiesArray[i].characterVision[1].Y_));
                             }
                             break;
                         case Character.MovementEnum.Down:
-                            if (GameMap.enemiesArray[i].characterVision[2].GetType().BaseType == typeof(Item))
+                            if (GameMap.enemiesArray[i].characterVision[2].GetType().BaseType == typeof(Item) || GameMap.enemiesArray[i].characterVision[2].GetType().BaseType == typeof(Weapon))
                             {
                                 GameMap.enemiesArray[i].Pickup(GameMap.GetItemAtPosition(GameMap.enemiesArray[i].characterVision[2].X_, GameMap.enemiesArray[i].characterVision[2].Y_));
                             }
                             break;
                         case Character.MovementEnum.Left:
-                            if (GameMap.enemiesArray[i].characterVision[3].GetType().BaseType == typeof(Item))
+                            if (GameMap.enemiesArray[i].characterVision[3].GetType().BaseType == typeof(Item) || GameMap.enemiesArray[i].characterVision[3].GetType().BaseType == typeof(Weapon))
                             {
                                 GameMap.enemiesArray[i].Pickup(GameMap.GetItemAtPosition(GameMap.enemiesArray[i].characterVision[3].X_, GameMap.enemiesArray[i].characterVision[3].Y_));
                             }
@@ -158,6 +158,7 @@ namespace GADE_POE
         /// </summary>
         public void EnemiesAttack()
         {
+            UpdateEngine();
             GameMap.UpdateVision();
             for (int i = 0; i < GameMap.enemiesArray.Length; i++)
 
