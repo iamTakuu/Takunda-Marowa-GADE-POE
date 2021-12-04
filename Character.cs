@@ -18,7 +18,7 @@ namespace GADE_POE
         protected int damage;
         private int goldPurse_;
         private int attackRange = 1;
-        protected Weapon weaponInventory;
+        protected Weapon weaponInventory = null;
 
         public Weapon CharWeapon { get { return weaponInventory; } }
         public int GoldPurse
@@ -195,6 +195,39 @@ namespace GADE_POE
             Left,
         }
         public abstract override string ToString();
+        public string ReturnWeapon()
+        {
+            if (weaponInventory == null)
+            {
+                return "Bare Hand";
+            }
+            else
+            {
+                return weaponInventory.WeaponTypeString;
+            }
+        }
+        public string ReturnRange()
+        {
+            if (weaponInventory == null)
+            {
+                return Convert.ToString(attackRange);
+            }
+            else
+            {
+                return Convert.ToString(weaponInventory.Range);
+            }
+        }
+        public string ReturnDurability()
+        {
+            if (weaponInventory == null)
+            {
+                return "0";
+            }
+            else
+            {
+                return Convert.ToString(weaponInventory.Durability);
+            }
+        }
     }
 
 }

@@ -62,7 +62,7 @@ namespace GADE_POE
             this.playerInfoGroup.Controls.Add(this.statsLabel);
             this.playerInfoGroup.Location = new System.Drawing.Point(671, 95);
             this.playerInfoGroup.Name = "playerInfoGroup";
-            this.playerInfoGroup.Size = new System.Drawing.Size(239, 147);
+            this.playerInfoGroup.Size = new System.Drawing.Size(286, 178);
             this.playerInfoGroup.TabIndex = 1;
             this.playerInfoGroup.TabStop = false;
             this.playerInfoGroup.Text = "Player Info";

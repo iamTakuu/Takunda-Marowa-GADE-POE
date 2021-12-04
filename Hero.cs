@@ -60,7 +60,7 @@ namespace GADE_POE
         public override string ToString()
         {
             string outputString;
-            outputString = "Player stats:" + "\nHP: " + this.HP + "/" + this.maxHP + "\nDamage: " +this.damage+ "\n [" +X+ "," +Y+ "]" +"\nGold Count: "+this.GoldPurse;
+            outputString = "Player stats:" + "\nHP: " + this.HP + "/" + this.maxHP + "\nCurrent Weapon: "+ReturnWeapon()+"\nWeapon Range: "+ReturnRange()+"\nDamage: " +this.damage+ "\nDurability: "+ReturnDurability()+"\n [" +X+ "," +Y+ "]" +"\nGold Count: "+this.GoldPurse;
             return outputString;
         }
     }
