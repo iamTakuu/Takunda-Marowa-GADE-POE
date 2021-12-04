@@ -80,7 +80,17 @@ namespace GADE_POE
         }
         public override string ToString()
         {
-            return "Mage " + base.ToString(); //Simply adds the word "Goblin" to the enemy output.
+            //string equipped;
+            //if (weaponInventory == null)
+            //{
+            //    equipped = "Barehanded: ";
+            //}
+            //else
+            //{
+            //    equipped = weaponInventory.WeaponTypeString;
+            //}
+            //return equipped+"Mage " + base.ToString(); //Simply adds the word "Goblin" to the enemy output.
+            return base.ToString();
         }
     }
 }

@@ -196,7 +196,17 @@ namespace GADE_POE
         }
         public override string ToString()
         {
-            return "Leader " + base.ToString(); //Simply adds the word "Leader" to the enemy output.
+            //string equipped;
+            //if (weaponInventory == null)
+            //{
+            //    equipped = "Barehanded: ";
+            //}
+            //else
+            //{
+            //    equipped = weaponInventory.WeaponTypeString;
+            //}
+            //return equipped + "Leader " + base.ToString(); //Simply adds the word "Leader" to the enemy output.
+            return base.ToString();
         }
     }
 }

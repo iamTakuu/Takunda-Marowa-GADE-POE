@@ -83,7 +83,7 @@ namespace GADE_POE
             }
         }
 
-        private void Equip(Weapon i)
+        protected void Equip(Weapon i)
         {
             weaponInventory = i;
             attackRange = weaponInventory.Range;
@@ -221,7 +221,7 @@ namespace GADE_POE
         {
             if (weaponInventory == null)
             {
-                return "0";
+                return "";
             }
             else
             {

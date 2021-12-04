@@ -16,6 +16,7 @@ namespace GADE_POE
         public Goblin(int x, int y) : base(x, y, 'G', 10, 1)
         {
             this.weaponInventory = new MeleeWeapon(MeleeWeapon.MeleeType.Dagger);
+            Equip(weaponInventory);
         }
 
         
@@ -47,7 +48,18 @@ namespace GADE_POE
         }
         public override string ToString()
         {
-            return "Goblin " + base.ToString(); //Simply adds the word "Goblin" to the enemy output.
+            //string equipped;
+            //if (weaponInventory == null)
+            //{
+            //    equipped = "Barehanded: ";
+            //}
+            //else
+            //{
+            //    equipped = weaponInventory.WeaponTypeString;
+                
+            //}
+            //return equipped+"Goblin " + base.ToString(); //Simply adds the word "Goblin" to the enemy output.
+            return base.ToString();
         }
     }
 }

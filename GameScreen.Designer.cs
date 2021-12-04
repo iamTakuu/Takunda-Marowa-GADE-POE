@@ -60,9 +60,10 @@ namespace GADE_POE
             // playerInfoGroup
             // 
             this.playerInfoGroup.Controls.Add(this.statsLabel);
+            this.playerInfoGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerInfoGroup.Location = new System.Drawing.Point(671, 95);
             this.playerInfoGroup.Name = "playerInfoGroup";
-            this.playerInfoGroup.Size = new System.Drawing.Size(286, 178);
+            this.playerInfoGroup.Size = new System.Drawing.Size(338, 235);
             this.playerInfoGroup.TabIndex = 1;
             this.playerInfoGroup.TabStop = false;
             this.playerInfoGroup.Text = "Player Info";
@@ -70,16 +71,16 @@ namespace GADE_POE
             // statsLabel
             // 
             this.statsLabel.AutoSize = true;
-            this.statsLabel.Font = new System.Drawing.Font("OCR A Extended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statsLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statsLabel.Location = new System.Drawing.Point(24, 30);
             this.statsLabel.Name = "statsLabel";
-            this.statsLabel.Size = new System.Drawing.Size(158, 17);
+            this.statsLabel.Size = new System.Drawing.Size(144, 19);
             this.statsLabel.TabIndex = 0;
             this.statsLabel.Text = "[Player Stats:]";
             // 
             // UpButton
             // 
-            this.UpButton.Location = new System.Drawing.Point(746, 279);
+            this.UpButton.Location = new System.Drawing.Point(796, 336);
             this.UpButton.Name = "UpButton";
             this.UpButton.Size = new System.Drawing.Size(91, 29);
             this.UpButton.TabIndex = 2;
@@ -89,7 +90,7 @@ namespace GADE_POE
             // 
             // DownButton
             // 
-            this.DownButton.Location = new System.Drawing.Point(746, 349);
+            this.DownButton.Location = new System.Drawing.Point(796, 406);
             this.DownButton.Name = "DownButton";
             this.DownButton.Size = new System.Drawing.Size(91, 29);
             this.DownButton.TabIndex = 3;
@@ -99,7 +100,7 @@ namespace GADE_POE
             // 
             // LeftButton
             // 
-            this.LeftButton.Location = new System.Drawing.Point(655, 314);
+            this.LeftButton.Location = new System.Drawing.Point(705, 371);
             this.LeftButton.Name = "LeftButton";
             this.LeftButton.Size = new System.Drawing.Size(91, 29);
             this.LeftButton.TabIndex = 4;
@@ -109,7 +110,7 @@ namespace GADE_POE
             // 
             // RightButton
             // 
-            this.RightButton.Location = new System.Drawing.Point(835, 314);
+            this.RightButton.Location = new System.Drawing.Point(885, 371);
             this.RightButton.Name = "RightButton";
             this.RightButton.Size = new System.Drawing.Size(91, 29);
             this.RightButton.TabIndex = 5;
@@ -124,9 +125,9 @@ namespace GADE_POE
             this.enemiesDropList.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.enemiesDropList.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enemiesDropList.FormattingEnabled = true;
-            this.enemiesDropList.Location = new System.Drawing.Point(389, 104);
+            this.enemiesDropList.Location = new System.Drawing.Point(331, 49);
             this.enemiesDropList.Name = "enemiesDropList";
-            this.enemiesDropList.Size = new System.Drawing.Size(276, 23);
+            this.enemiesDropList.Size = new System.Drawing.Size(422, 23);
             this.enemiesDropList.TabIndex = 6;
             this.enemiesDropList.SelectedIndexChanged += new System.EventHandler(this.enemiesDropList_SelectedIndexChanged);
             // 

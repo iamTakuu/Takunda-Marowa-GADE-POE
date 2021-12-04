@@ -25,12 +25,19 @@ namespace GADE_POE
 
         public override string ToString()
         {
-            if (IsDead())
+
+            //string equipped;
+            if (weaponInventory == null)
             {
-                return ("at [" + X + ", " + Y + "] is Dead.");
+                return "Bare Handed: " + this.GetType().Name + " at [" + X + ", " + Y + "] (" + damage + " DMG) (HP: " + HP+"/"+maxHP+")";
             }
             else
-            return ("at [" + X + ", " + Y + "] (" + damage + " DMG) HP: "+HP);
+            {
+                return "Equipped: " + this.GetType().Name + " at [" + X + ", " + Y + "] (" + damage + " DMG) (HP: " + HP + "/" + maxHP + ") with " + this.weaponInventory.WeaponTypeString;
+                //equipped = weaponInventory.WeaponTypeString;
+            }
+            
+            //return ("at [" + X + ", " + Y + "] (" + damage + " DMG) HP: "+HP);
 
         }
 
