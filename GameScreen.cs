@@ -104,6 +104,7 @@ namespace GADE_POE
             {
                 gameEngine.UpdateEngine();
                 gameEngine.MoveEnemies();
+                gameEngine.UpdateEngine();
                 gameEngine.EnemiesAttack();
                 UpdateForm();
             }
@@ -120,6 +121,7 @@ namespace GADE_POE
             {
                 gameEngine.UpdateEngine();
                 gameEngine.MoveEnemies();
+                gameEngine.UpdateEngine();
                 gameEngine.EnemiesAttack();
                 UpdateForm();
             }
@@ -133,6 +135,7 @@ namespace GADE_POE
             {
                 gameEngine.UpdateEngine();
                 gameEngine.MoveEnemies();
+                gameEngine.UpdateEngine();
                 gameEngine.EnemiesAttack();
                 UpdateForm();
             }
@@ -148,6 +151,7 @@ namespace GADE_POE
             {
                 gameEngine.UpdateEngine();
                 gameEngine.MoveEnemies();
+                gameEngine.UpdateEngine();
                 gameEngine.EnemiesAttack();
                 UpdateForm();
             }
