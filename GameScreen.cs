@@ -14,13 +14,16 @@ namespace GADE_POE
     public partial class GameScreen : Form
     {
         GameEngine gameEngine = new GameEngine();
+        
         public GameScreen()
         {
             InitializeComponent();
+
         }
 
         private void GameScreen_Load(object sender, EventArgs e)
         {
+            UpdateShop();
             mapLabel.Text = gameEngine.ToString();
             statsLabel.Text = gameEngine.GameMap.hero.ToString();
 
@@ -32,8 +35,28 @@ namespace GADE_POE
             FillEnemiesList();
             mapLabel.Text = gameEngine.ToString();
             statsLabel.Text = gameEngine.GameMap.hero.ToString();
-
+            UpdateShop();
             
+        }
+
+        private void UpdateShop()
+        {
+            Button[] buttonsArray = { shopWeapon1, shopWeapon2, shopWeapon3 };
+            for (int i = 0; i < buttonsArray.Length; i++)
+            {
+                buttonsArray[i].Text = gameEngine.GameMap.shop.DisplayWeapon(i);
+            }
+            for (int i = 0; i < buttonsArray.Length; i++)
+            {
+                if (!gameEngine.GameMap.shop.CanBuy(i))
+                {
+                    buttonsArray[i].Enabled = false;
+                }
+                else
+                {
+                    buttonsArray[i].Enabled = true;
+                }
+            }
         }
 
         /// <summary>

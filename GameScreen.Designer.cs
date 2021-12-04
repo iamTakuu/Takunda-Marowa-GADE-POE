@@ -41,7 +41,12 @@ namespace GADE_POE
             this.logBox = new System.Windows.Forms.RichTextBox();
             this.SaveButton = new System.Windows.Forms.Button();
             this.LoadButton = new System.Windows.Forms.Button();
+            this.shopBox = new System.Windows.Forms.GroupBox();
+            this.shopWeapon1 = new System.Windows.Forms.Button();
+            this.shopWeapon2 = new System.Windows.Forms.Button();
+            this.shopWeapon3 = new System.Windows.Forms.Button();
             this.playerInfoGroup.SuspendLayout();
+            this.shopBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // mapLabel
@@ -176,11 +181,52 @@ namespace GADE_POE
             this.LoadButton.UseVisualStyleBackColor = true;
             this.LoadButton.Click += new System.EventHandler(this.LoadButton_Click);
             // 
+            // shopBox
+            // 
+            this.shopBox.Controls.Add(this.shopWeapon3);
+            this.shopBox.Controls.Add(this.shopWeapon2);
+            this.shopBox.Controls.Add(this.shopWeapon1);
+            this.shopBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shopBox.Location = new System.Drawing.Point(1036, 31);
+            this.shopBox.Name = "shopBox";
+            this.shopBox.Size = new System.Drawing.Size(414, 459);
+            this.shopBox.TabIndex = 11;
+            this.shopBox.TabStop = false;
+            this.shopBox.Text = "Shop";
+            // 
+            // shopWeapon1
+            // 
+            this.shopWeapon1.Location = new System.Drawing.Point(121, 65);
+            this.shopWeapon1.Name = "shopWeapon1";
+            this.shopWeapon1.Size = new System.Drawing.Size(191, 76);
+            this.shopWeapon1.TabIndex = 0;
+            this.shopWeapon1.Text = "[Item 1]";
+            this.shopWeapon1.UseVisualStyleBackColor = true;
+            // 
+            // shopWeapon2
+            // 
+            this.shopWeapon2.Location = new System.Drawing.Point(121, 201);
+            this.shopWeapon2.Name = "shopWeapon2";
+            this.shopWeapon2.Size = new System.Drawing.Size(191, 76);
+            this.shopWeapon2.TabIndex = 1;
+            this.shopWeapon2.Text = "[Item 2]";
+            this.shopWeapon2.UseVisualStyleBackColor = true;
+            // 
+            // shopWeapon3
+            // 
+            this.shopWeapon3.Location = new System.Drawing.Point(121, 338);
+            this.shopWeapon3.Name = "shopWeapon3";
+            this.shopWeapon3.Size = new System.Drawing.Size(191, 76);
+            this.shopWeapon3.TabIndex = 2;
+            this.shopWeapon3.Text = "[Item 3]";
+            this.shopWeapon3.UseVisualStyleBackColor = true;
+            // 
             // GameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1330, 523);
+            this.ClientSize = new System.Drawing.Size(1475, 547);
+            this.Controls.Add(this.shopBox);
             this.Controls.Add(this.LoadButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.logBox);
@@ -197,6 +243,7 @@ namespace GADE_POE
             this.Load += new System.EventHandler(this.GameScreen_Load);
             this.playerInfoGroup.ResumeLayout(false);
             this.playerInfoGroup.PerformLayout();
+            this.shopBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,6 +263,10 @@ namespace GADE_POE
         private System.Windows.Forms.RichTextBox logBox;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button LoadButton;
+        private System.Windows.Forms.GroupBox shopBox;
+        private System.Windows.Forms.Button shopWeapon3;
+        private System.Windows.Forms.Button shopWeapon2;
+        private System.Windows.Forms.Button shopWeapon1;
     }
 }
 

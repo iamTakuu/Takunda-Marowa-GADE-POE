@@ -21,6 +21,7 @@ namespace GADE_POE
         private int height;
         private int width;
         private Random rand = new Random();
+        public Shop shop;
 
 
         public Map(int minHeight, int maxHeight, int minWidth, int maxWidth, int enemyCount, int goldCount, int weaponCount)
@@ -39,6 +40,7 @@ namespace GADE_POE
             itemsArray = new Item[goldCount+weaponCount];
 
             hero = (Hero)Create(Tile.TileType.Hero); //Basically promising that I'll send back a Hero
+            shop = new Shop(hero);
 
             //This stores the created hero into the tile array
             tileArray2D[hero.X_, hero.Y_] = hero;

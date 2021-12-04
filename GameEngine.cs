@@ -16,12 +16,18 @@ namespace GADE_POE
     [Serializable]
     class GameEngine
     {
-        private Map gameMap = new Map(15, 20, 15, 20, 5, 3, 2);
-        //private Shop shop = new Shop();
+        
+        private Map gameMap = new Map(15, 20, 15, 20, 5, 6, 2);
+        
+        
         public Map GameMap
         {
             get { return gameMap; }
             set { gameMap = value; }
+        }
+        public GameEngine()
+        {
+            
         }
         private Stream stream;
         private IFormatter formatter = new BinaryFormatter();

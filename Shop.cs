@@ -8,15 +8,15 @@ namespace GADE_POE
 {
     class Shop
     {
-        private Weapon[] weaponsArray;
+        private Weapon[] weaponsArray = new Weapon[3];
         private Random random;
         private Character buyer = null;
 
         public Shop(Character buyingChar)
         {
             buyer = buyingChar;
-            Weapon[] weaponsArray = new Weapon[3];
-            Random random = new Random();
+            //Weapon[] weaponsArray = new Weapon[3];
+            random = new Random();
             for (int i = 0; i < weaponsArray.Length; i++)
             {
                 
@@ -64,7 +64,7 @@ namespace GADE_POE
         }
         public string DisplayWeapon(int num)
         {
-            string output = string.Format("Buy weapon {0}, for {1} Gold", weaponsArray[num].WeaponTypeString, weaponsArray[num].Cost);
+            string output = string.Format("Buy weapon: {0}, for {1} Gold", weaponsArray[num].WeaponTypeString, weaponsArray[num].Cost);
             return output;
         }
     }
