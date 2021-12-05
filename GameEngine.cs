@@ -18,7 +18,7 @@ namespace GADE_POE
     {
         
         private Map gameMap = new Map(15, 20, 15, 20, 5, 6, 2);
-        
+        public Shop gameShop;
         
         public Map GameMap
         {
@@ -27,7 +27,7 @@ namespace GADE_POE
         }
         public GameEngine()
         {
-            
+            gameShop = new Shop(gameMap.hero);
         }
         private Stream stream;
         private IFormatter formatter = new BinaryFormatter();

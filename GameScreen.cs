@@ -44,11 +44,11 @@ namespace GADE_POE
             Button[] buttonsArray = { shopWeapon1, shopWeapon2, shopWeapon3 };
             for (int i = 0; i < buttonsArray.Length; i++)
             {
-                buttonsArray[i].Text = gameEngine.GameMap.shop.DisplayWeapon(i);
+                buttonsArray[i].Text = gameEngine.gameShop.DisplayWeapon(i);
             }
             for (int i = 0; i < buttonsArray.Length; i++)
             {
-                if (!gameEngine.GameMap.shop.CanBuy(i))
+                if (!gameEngine.gameShop.CanBuy(i))
                 {
                     buttonsArray[i].Enabled = false;
                 }
@@ -189,7 +189,7 @@ namespace GADE_POE
 
         private void shopWeapon1_Click(object sender, EventArgs e)
         {
-            gameEngine.GameMap.shop.Buy(0);
+            gameEngine.gameShop.Buy(0);
             UpdateShop();
             //shopWeapon1.Text = gameEngine.GameMap.shop.DisplayWeapon(0);
 
@@ -199,7 +199,7 @@ namespace GADE_POE
 
         private void shopWeapon2_Click(object sender, EventArgs e)
         {
-            gameEngine.GameMap.shop.Buy(1);
+            gameEngine.gameShop.Buy(1);
             UpdateShop();
             //shopWeapon1.Text = gameEngine.GameMap.shop.DisplayWeapon(1);
             statsLabel.Text = gameEngine.GameMap.hero.ToString();
@@ -207,7 +207,7 @@ namespace GADE_POE
 
         private void shopWeapon3_Click(object sender, EventArgs e)
         {
-            gameEngine.GameMap.shop.Buy(2);
+            gameEngine.gameShop.Buy(2);
             UpdateShop();
             statsLabel.Text = gameEngine.GameMap.hero.ToString();
         }
