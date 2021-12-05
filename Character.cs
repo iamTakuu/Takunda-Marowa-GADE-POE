@@ -68,6 +68,23 @@ namespace GADE_POE
         }
 
         /// <summary>
+        /// Checks if the character to be looted is dead. If the killer has no weapon, they equip the victims weapon. Always loots the gold.
+        /// </summary>
+        /// <param name="toBeLooted"></param>
+        public void Loot(Character toBeLooted)
+        {
+            if (toBeLooted.IsDead())
+            {
+                GoldPurse += toBeLooted.GoldPurse;
+
+                if (this.weaponInventory == null && this.GetType() != typeof(Mage))
+                {
+                Equip(toBeLooted.weaponInventory);
+                }
+            }
+        }
+
+        /// <summary>
         /// This will allow a character to picup any item it walks through.
         /// </summary>
         /// <param name="i"></param>

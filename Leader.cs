@@ -14,6 +14,7 @@ namespace GADE_POE
         public Leader(int x, int y, Hero hero) : base(x, y, 'L', 20, 2)
         {
             LeaderTarget = hero;
+            GoldPurse = 2;
         }
 
         public override MovementEnum ReturnMove(MovementEnum move = MovementEnum.NoMovement)

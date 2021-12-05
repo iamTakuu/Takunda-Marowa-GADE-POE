@@ -84,6 +84,7 @@ namespace GADE_POE
         private void AttackButton_Click(object sender, EventArgs e)
         {
             gameEngine.GameMap.hero.Attack(gameEngine.GameMap.enemiesArray[enemiesDropList.SelectedIndex]);
+            gameEngine.GameMap.hero.Loot(gameEngine.GameMap.enemiesArray[enemiesDropList.SelectedIndex]);
             gameEngine.EnemiesAttack();
             logBox.Text += "\n"+ gameEngine.GameMap.enemiesArray[enemiesDropList.SelectedIndex].ToString();
             gameEngine.UpdateEngine();

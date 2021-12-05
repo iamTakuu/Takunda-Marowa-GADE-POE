@@ -29,11 +29,11 @@ namespace GADE_POE
             //string equipped;
             if (weaponInventory == null)
             {
-                return "Bare Handed: " + this.GetType().Name + " at [" + X + ", " + Y + "] (" + damage + " DMG) (HP: " + HP+"/"+maxHP+")";
+                return "Bare Handed: " + this.GetType().Name + " at [" + X + ", " + Y + "] (" + damage + " DMG) (HP: " + HP+"/"+maxHP+") (Gold: "+GoldPurse+")";
             }
             else
             {
-                return "Equipped: " + this.GetType().Name + " at [" + X + ", " + Y + "] (" + damage + " DMG) (HP: " + HP + "/" + maxHP + ") with " + this.weaponInventory.WeaponTypeString;
+                return "Equipped: " + this.GetType().Name + " at [" + X + ", " + Y + "] (" + damage + " DMG) (HP: " + HP + "/" + maxHP + ") (Gold: " + GoldPurse + ") ,with " + this.weaponInventory.WeaponTypeString;
                 //equipped = weaponInventory.WeaponTypeString;
             }
             

@@ -172,6 +172,7 @@ namespace GADE_POE
                 if (GameMap.enemiesArray[i].GetType() == typeof(Goblin) || GameMap.enemiesArray[i].GetType() == typeof(Leader))
                 {
                     GameMap.enemiesArray[i].Attack(GameMap.hero);
+                    GameMap.enemiesArray[i].Loot(GameMap.hero);
                 }
 
 
@@ -181,6 +182,7 @@ namespace GADE_POE
                     for (int j = 0; j < GameMap.enemiesArray.Length; j++)
                     {
                         GameMap.enemiesArray[i].Attack(GameMap.enemiesArray[j]);
+                        GameMap.enemiesArray[i].Loot(GameMap.enemiesArray[j]);
                     }
                 }
 

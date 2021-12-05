@@ -15,7 +15,8 @@ namespace GADE_POE
     {
         public Goblin(int x, int y) : base(x, y, 'G', 10, 1)
         {
-            this.weaponInventory = new MeleeWeapon(MeleeWeapon.MeleeType.Dagger);
+            GoldPurse = 1;
+            weaponInventory = new MeleeWeapon(MeleeWeapon.MeleeType.Dagger);
             Equip(weaponInventory);
         }
 
