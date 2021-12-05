@@ -42,9 +42,9 @@ namespace GADE_POE
             this.SaveButton = new System.Windows.Forms.Button();
             this.LoadButton = new System.Windows.Forms.Button();
             this.shopBox = new System.Windows.Forms.GroupBox();
-            this.shopWeapon1 = new System.Windows.Forms.Button();
-            this.shopWeapon2 = new System.Windows.Forms.Button();
             this.shopWeapon3 = new System.Windows.Forms.Button();
+            this.shopWeapon2 = new System.Windows.Forms.Button();
+            this.shopWeapon1 = new System.Windows.Forms.Button();
             this.playerInfoGroup.SuspendLayout();
             this.shopBox.SuspendLayout();
             this.SuspendLayout();
@@ -194,14 +194,15 @@ namespace GADE_POE
             this.shopBox.TabStop = false;
             this.shopBox.Text = "Shop";
             // 
-            // shopWeapon1
+            // shopWeapon3
             // 
-            this.shopWeapon1.Location = new System.Drawing.Point(121, 65);
-            this.shopWeapon1.Name = "shopWeapon1";
-            this.shopWeapon1.Size = new System.Drawing.Size(191, 76);
-            this.shopWeapon1.TabIndex = 0;
-            this.shopWeapon1.Text = "[Item 1]";
-            this.shopWeapon1.UseVisualStyleBackColor = true;
+            this.shopWeapon3.Location = new System.Drawing.Point(121, 338);
+            this.shopWeapon3.Name = "shopWeapon3";
+            this.shopWeapon3.Size = new System.Drawing.Size(191, 76);
+            this.shopWeapon3.TabIndex = 2;
+            this.shopWeapon3.Text = "[Item 3]";
+            this.shopWeapon3.UseVisualStyleBackColor = true;
+            this.shopWeapon3.Click += new System.EventHandler(this.shopWeapon3_Click);
             // 
             // shopWeapon2
             // 
@@ -211,15 +212,17 @@ namespace GADE_POE
             this.shopWeapon2.TabIndex = 1;
             this.shopWeapon2.Text = "[Item 2]";
             this.shopWeapon2.UseVisualStyleBackColor = true;
+            this.shopWeapon2.Click += new System.EventHandler(this.shopWeapon2_Click);
             // 
-            // shopWeapon3
+            // shopWeapon1
             // 
-            this.shopWeapon3.Location = new System.Drawing.Point(121, 338);
-            this.shopWeapon3.Name = "shopWeapon3";
-            this.shopWeapon3.Size = new System.Drawing.Size(191, 76);
-            this.shopWeapon3.TabIndex = 2;
-            this.shopWeapon3.Text = "[Item 3]";
-            this.shopWeapon3.UseVisualStyleBackColor = true;
+            this.shopWeapon1.Location = new System.Drawing.Point(121, 65);
+            this.shopWeapon1.Name = "shopWeapon1";
+            this.shopWeapon1.Size = new System.Drawing.Size(191, 76);
+            this.shopWeapon1.TabIndex = 0;
+            this.shopWeapon1.Text = "[Item 1]";
+            this.shopWeapon1.UseVisualStyleBackColor = true;
+            this.shopWeapon1.Click += new System.EventHandler(this.shopWeapon1_Click);
             // 
             // GameScreen
             // 

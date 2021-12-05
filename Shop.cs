@@ -58,9 +58,13 @@ namespace GADE_POE
         /// <param name="num"></param>
         public void Buy(int num)
         {
+            if (CanBuy(num))
+            {
             buyer.GoldPurse -= weaponsArray[num].Cost;
             buyer.Pickup(weaponsArray[num]);
             weaponsArray[num] = RandomWeapon();
+
+            }
         }
         public string DisplayWeapon(int num)
         {

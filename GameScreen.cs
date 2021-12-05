@@ -186,5 +186,30 @@ namespace GADE_POE
             logBox.SelectionStart = logBox.Text.Length;
             logBox.ScrollToCaret();
         }
+
+        private void shopWeapon1_Click(object sender, EventArgs e)
+        {
+            gameEngine.GameMap.shop.Buy(0);
+            UpdateShop();
+            //shopWeapon1.Text = gameEngine.GameMap.shop.DisplayWeapon(0);
+
+            statsLabel.Text = gameEngine.GameMap.hero.ToString();
+
+        }
+
+        private void shopWeapon2_Click(object sender, EventArgs e)
+        {
+            gameEngine.GameMap.shop.Buy(1);
+            UpdateShop();
+            //shopWeapon1.Text = gameEngine.GameMap.shop.DisplayWeapon(1);
+            statsLabel.Text = gameEngine.GameMap.hero.ToString();
+        }
+
+        private void shopWeapon3_Click(object sender, EventArgs e)
+        {
+            gameEngine.GameMap.shop.Buy(2);
+            UpdateShop();
+            statsLabel.Text = gameEngine.GameMap.hero.ToString();
+        }
     }
 }
