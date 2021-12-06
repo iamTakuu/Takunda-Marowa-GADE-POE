@@ -1,7 +1,8 @@
-# Takunda-Marowa-GADE-TASK2-V1.0
+# Takunda-Marowa-GADE-RogueLITE_POE
 
-This is task 2 of the Game Development POE
+This is the final task of the Game Development POE.
 
 
-"This task has you add additional functionality and classes to your game, as well as dealing with file
-handling for saving and loading save states."
+Game now has almost full functionality.
+Updates have been made to address issues in task 1 and task 2.
+Enjoy.
