@@ -130,9 +130,9 @@ namespace GADE_POE
             this.enemiesDropList.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.enemiesDropList.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enemiesDropList.FormattingEnabled = true;
-            this.enemiesDropList.Location = new System.Drawing.Point(331, 49);
+            this.enemiesDropList.Location = new System.Drawing.Point(351, 48);
             this.enemiesDropList.Name = "enemiesDropList";
-            this.enemiesDropList.Size = new System.Drawing.Size(422, 23);
+            this.enemiesDropList.Size = new System.Drawing.Size(510, 23);
             this.enemiesDropList.TabIndex = 6;
             this.enemiesDropList.SelectedIndexChanged += new System.EventHandler(this.enemiesDropList_SelectedIndexChanged);
             // 

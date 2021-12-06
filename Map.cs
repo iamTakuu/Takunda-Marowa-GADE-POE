@@ -331,7 +331,7 @@ namespace GADE_POE
                         y = rand.Next(0, height);
                     } while (CheckCoord(x, y));
             
-                    return new Hero(x, y, 10);
+                    return new Hero(x, y, 30);
 
                 case Tile.TileType.Gold:
                     do
