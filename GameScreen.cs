@@ -39,6 +39,9 @@ namespace GADE_POE
             
         }
 
+        /// <summary>
+        /// Refreshes the shop with new stuff.
+        /// </summary>
         private void UpdateShop()
         {
             Button[] buttonsArray = { shopWeapon1, shopWeapon2, shopWeapon3 };
@@ -72,8 +75,6 @@ namespace GADE_POE
 
                 }
             }
-            
-            //throw new NotImplementedException();
         }
 
         /// <summary>
@@ -100,7 +101,7 @@ namespace GADE_POE
 
         private void UpButton_Click(object sender, EventArgs e)
         {
-            //gameEngine.Update();
+            
             if (gameEngine.MovePlayer(Character.MovementEnum.Up))
             {
                 gameEngine.UpdateEngine();
@@ -117,7 +118,7 @@ namespace GADE_POE
 
         private void RightButton_Click(object sender, EventArgs e)
         {
-            //gameEngine.Update();
+           
             if (gameEngine.MovePlayer(Character.MovementEnum.Right))
             {
                 gameEngine.UpdateEngine();
@@ -131,7 +132,7 @@ namespace GADE_POE
 
         private void DownButton_Click(object sender, EventArgs e)
         {
-            //gameEngine.Update();
+            
             if (gameEngine.MovePlayer(Character.MovementEnum.Down))
             {
                 gameEngine.UpdateEngine();
@@ -147,7 +148,7 @@ namespace GADE_POE
 
         private void LeftButton_Click(object sender, EventArgs e)
         {
-            //gameEngine.Update();
+            
             if (gameEngine.MovePlayer(Character.MovementEnum.Left))
             {
                 gameEngine.UpdateEngine();
@@ -192,8 +193,7 @@ namespace GADE_POE
         {
             gameEngine.gameShop.Buy(0);
             UpdateShop();
-            //shopWeapon1.Text = gameEngine.GameMap.shop.DisplayWeapon(0);
-
+            
             statsLabel.Text = gameEngine.GameMap.hero.ToString();
 
         }
@@ -202,7 +202,7 @@ namespace GADE_POE
         {
             gameEngine.gameShop.Buy(1);
             UpdateShop();
-            //shopWeapon1.Text = gameEngine.GameMap.shop.DisplayWeapon(1);
+            
             statsLabel.Text = gameEngine.GameMap.hero.ToString();
         }
 
