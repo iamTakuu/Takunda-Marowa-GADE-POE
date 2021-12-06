@@ -200,6 +200,7 @@ namespace GADE_POE
             stream = new FileStream(AppDomain.CurrentDomain.BaseDirectory + "Save.dat", FileMode.Create, FileAccess.Write); //https://www.guru99.com/c-sharp-serialization.html
 
             formatter.Serialize(stream, GameMap);
+            formatter.Serialize(stream, gameShop);
             stream.Close();
         }
         /// <summary>
@@ -209,6 +210,7 @@ namespace GADE_POE
         {
             stream = new FileStream(AppDomain.CurrentDomain.BaseDirectory + "Save.dat", FileMode.Open, FileAccess.Read); //https://www.guru99.com/c-sharp-serialization.html
             GameMap = (Map)formatter.Deserialize(stream);
+            gameShop = (Shop)formatter.Deserialize(stream);
             stream.Close();
             UpdateEngine();
         }

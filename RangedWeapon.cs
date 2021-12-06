@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GADE_POE
 {
+    [Serializable]
     class RangedWeapon : Weapon
     {
         public RangedWeapon(RangedTypes type, int x=0, int y=0) : base(x, y)

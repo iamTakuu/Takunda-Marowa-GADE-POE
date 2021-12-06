@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GADE_POE
 {
+    [Serializable]
     class MeleeWeapon : Weapon
     {
         public override int Range { get { return 1; }}

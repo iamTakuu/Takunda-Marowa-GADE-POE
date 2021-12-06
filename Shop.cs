@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GADE_POE
 {
+    [Serializable]
     class Shop
     {
         private Weapon[] weaponsArray = new Weapon[3];

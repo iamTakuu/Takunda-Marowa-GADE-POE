@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GADE_POE
 {
+    [Serializable]
     abstract class Weapon : Item
     {
         private protected int damage;
