@@ -16,6 +16,7 @@ namespace GADE_POE
         {
             LeaderTarget = hero;
             GoldPurse = 2;
+            weaponInventory = new MeleeWeapon(MeleeWeapon.MeleeType.Longsword);
         }
 
         public override MovementEnum ReturnMove(MovementEnum move = MovementEnum.NoMovement)
